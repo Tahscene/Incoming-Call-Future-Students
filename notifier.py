@@ -1,75 +1,63 @@
 """
-Notifier: Sends Telegram messages (and optionally email)
-for new CSE/IT Lecturer job postings.
+Notifier v2 — only sends Telegram for NEW, recent CSE/IT Lecturer jobs.
 """
-
-import json
-import os
-import requests
+import json, os, requests
+from datetime import datetime, timezone
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
 
-
-def send_telegram(text: str):
+def send_telegram(text):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        print("[Telegram] Credentials missing, skipping.")
-        return
+        print("[Telegram] Missing credentials")
+        return False
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": text,
-        "parse_mode": "HTML",
+    r   = requests.post(url, json={
+        "chat_id":                  TELEGRAM_CHAT_ID,
+        "text":                     text,
+        "parse_mode":               "HTML",
         "disable_web_page_preview": False,
-    }
-    try:
-        r = requests.post(url, json=payload, timeout=10)
-        r.raise_for_status()
-        print("[Telegram] Message sent!")
-    except Exception as e:
-        print(f"[Telegram] Error: {e}")
+    }, timeout=10)
+    return r.status_code == 200
 
-
-def format_job(job: dict) -> str:
+def format_job(job):
+    found = job.get("found_at", "")[:10]
     return (
-        f"🎓 <b>New Lecturer Job Found!</b>\n\n"
+        f"🎓 <b>New CSE/IT Lecturer Job!</b>\n\n"
         f"📌 <b>{job['title']}</b>\n"
         f"🏫 {job['institution']}\n"
         f"🌐 Source: {job['source']}\n"
-        f"🔗 <a href='{job['url']}'>View Circular</a>\n"
-        f"🕒 Found: {job['found_at'][:10]}"
+        f"📅 Posted: {found}\n"
+        f"🔗 <a href='{job['url']}'>View Circular →</a>"
     )
-
-
-def notify_all(jobs: list):
-    if not jobs:
-        print("No new jobs to notify.")
-        return
-
-    print(f"📬 Sending {len(jobs)} notification(s)...")
-    for job in jobs:
-        msg = format_job(job)
-        send_telegram(msg)
-
 
 def main():
     try:
-        with open("new_jobs.json", "r", encoding="utf-8") as f:
+        with open("new_jobs.json", encoding="utf-8") as f:
             jobs = json.load(f)
     except FileNotFoundError:
-        print("new_jobs.json not found.")
+        print("new_jobs.json not found")
         return
 
-    notify_all(jobs)
+    if not jobs:
+        print("No new CSE/IT lecturer jobs to notify.")
+        return
 
-    # Send a summary if many jobs found
+    print(f"📬 Sending {len(jobs)} notification(s)...")
+    sent = 0
+    for job in jobs:
+        if send_telegram(format_job(job)):
+            sent += 1
+        # small delay between messages
+        import time; time.sleep(0.8)
+
+    print(f"✅ {sent}/{len(jobs)} messages sent")
+
     if len(jobs) >= 3:
-        summary = (
-            f"📊 <b>Summary:</b> {len(jobs)} new CSE/IT Lecturer "
-            f"postings found today! Check your dashboard for details."
+        send_telegram(
+            f"📊 <b>Summary:</b> {len(jobs)} new CSE/IT Lecturer postings found!\n"
+            f"Check your dashboard for details. 🎉"
         )
-        send_telegram(summary)
-
 
 if __name__ == "__main__":
     main()
