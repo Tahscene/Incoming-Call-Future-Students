@@ -1,0 +1,851 @@
+{
+  "jobs": [
+    {
+      "id": "904182f559d4",
+      "title": "Dept. of Computer Science & Information Technology (CSIT)",
+      "source": "Victoria University",
+      "institution": "Victoria University",
+      "url": "https://vub.edu.bd/computer-science-information-technology-csit/",
+      "found_at": "2026-05-24T13:58:23.423732",
+      "notified": false
+    },
+    {
+      "id": "8931911cdc9d",
+      "title": "B.Sc in CSE (Regular & Evening)",
+      "source": "Victoria University",
+      "institution": "Victoria University",
+      "url": "https://vub.edu.bd/computer-science-engineering-cse/",
+      "found_at": "2026-05-24T13:58:23.423728",
+      "notified": false
+    },
+    {
+      "id": "c40b0cc0c772",
+      "title": "Dept. of Computer science & Engineering (CSE)",
+      "source": "Victoria University",
+      "institution": "Victoria University",
+      "url": "https://vub.edu.bd/computer-science-engineering-cse/",
+      "found_at": "2026-05-24T13:58:23.423723",
+      "notified": false
+    },
+    {
+      "id": "33cd977c0593",
+      "title": "Faculty of Science",
+      "source": "Victoria University",
+      "institution": "Victoria University",
+      "url": "https://vub.edu.bd/career/#",
+      "found_at": "2026-05-24T13:58:23.423719",
+      "notified": false
+    },
+    {
+      "id": "8e62531df55d",
+      "title": "Faculty of Arts & Humanities",
+      "source": "Victoria University",
+      "institution": "Victoria University",
+      "url": "http://3",
+      "found_at": "2026-05-24T13:58:23.423705",
+      "notified": false
+    },
+    {
+      "id": "409b471a1644",
+      "title": "Faculty of Business & Management",
+      "source": "Victoria University",
+      "institution": "Victoria University",
+      "url": "https://vub.edu.bd/career/#",
+      "found_at": "2026-05-24T13:58:23.423682",
+      "notified": false
+    },
+    {
+      "id": "4c0f8aac4cc3",
+      "title": "Visiting Faculty Members",
+      "source": "Uttara University",
+      "institution": "Uttara University",
+      "url": "https://www.uttara.ac.bd/visiting-faculty-members/",
+      "found_at": "2026-05-24T13:58:21.863075",
+      "notified": false
+    },
+    {
+      "id": "51ccca7cfa3d",
+      "title": "Faculty Members",
+      "source": "Uttara University",
+      "institution": "Uttara University",
+      "url": "https://www.uttara.ac.bd/faculty/",
+      "found_at": "2026-05-24T13:58:21.863071",
+      "notified": false
+    },
+    {
+      "id": "5e8ae64957aa",
+      "title": "Faculty & HR Office",
+      "source": "Uttara University",
+      "institution": "Uttara University",
+      "url": "https://www.uttara.ac.bd/faculty-hr-office/",
+      "found_at": "2026-05-24T13:58:21.863038",
+      "notified": false
+    },
+    {
+      "id": "8dfb54764820",
+      "title": "Department of Computer Science and Engineering",
+      "source": "Uttara University",
+      "institution": "Uttara University",
+      "url": "https://www.uttara.ac.bd/department-of-cse",
+      "found_at": "2026-05-24T13:58:21.862948",
+      "notified": false
+    },
+    {
+      "id": "59a8c3408fc7",
+      "title": "Primeasia University Faculty Honored by SOFEN for Outstanding Contribution to Bangladesh’s Education Sector",
+      "source": "Primeasia Univ",
+      "institution": "Primeasia Univ",
+      "url": "https://primeasia.edu.bd/primeasia-university-faculty-honored-by-sofen-for-outstanding-contribution-to-bangladeshs-education-sector/",
+      "found_at": "2026-05-24T13:58:20.440290",
+      "notified": false
+    },
+    {
+      "id": "1e9814d32f16",
+      "title": "Faculty Position Opening",
+      "source": "Primeasia Univ",
+      "institution": "Primeasia Univ",
+      "url": "https://primeasia.edu.bd/others/career/faculty-position-opening/",
+      "found_at": "2026-05-24T13:58:20.440192",
+      "notified": false
+    },
+    {
+      "id": "e02f045a4660",
+      "title": "B.Sc in Computer Science & Engineering (CSE)",
+      "source": "Primeasia Univ",
+      "institution": "Primeasia Univ",
+      "url": "https://primeasia.edu.bd/cse/",
+      "found_at": "2026-05-24T13:58:20.440096",
+      "notified": false
+    },
+    {
+      "id": "e3213ef86747",
+      "title": "Faculty Recruitment Committee",
+      "source": "Primeasia Univ",
+      "institution": "Primeasia Univ",
+      "url": "https://primeasia.edu.bd/academic/academic-committee/faculty-recruitment-committee/",
+      "found_at": "2026-05-24T13:58:20.440077",
+      "notified": false
+    },
+    {
+      "id": "09b02ec14931",
+      "title": "Information Technology (IT)",
+      "source": "Primeasia Univ",
+      "institution": "Primeasia Univ",
+      "url": "https://primeasia.edu.bd/administration/office-of-it/",
+      "found_at": "2026-05-24T13:58:20.440031",
+      "notified": false
+    },
+    {
+      "id": "ba118c2dd543",
+      "title": "All Faculty Members",
+      "source": "Manarat Intl Univ",
+      "institution": "Manarat Intl Univ",
+      "url": "https://manarat.ac.bd/all-faculty-members/",
+      "found_at": "2026-05-24T13:58:18.769193",
+      "notified": false
+    },
+    {
+      "id": "343cb2e7d247",
+      "title": "Department of Computer Science & Engineering",
+      "source": "Manarat Intl Univ",
+      "institution": "Manarat Intl Univ",
+      "url": "http://cse.manarat.ac.bd/",
+      "found_at": "2026-05-24T13:58:18.769159",
+      "notified": false
+    },
+    {
+      "id": "bc51e57913a9",
+      "title": "Visiting Faculty",
+      "source": "IUBAT",
+      "institution": "IUBAT",
+      "url": "https://iubat.edu/visiting-faculty/",
+      "found_at": "2026-05-24T13:58:11.944176",
+      "notified": false
+    },
+    {
+      "id": "7f273c931efc",
+      "title": "Faculty of Science &\r\n                                                    Technology",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fst",
+      "found_at": "2026-05-24T13:58:03.427055",
+      "notified": false
+    },
+    {
+      "id": "353540e9520b",
+      "title": "Faculty of Arts & Social\r\n                                                    Sciences",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fass",
+      "found_at": "2026-05-24T13:58:03.427038",
+      "notified": false
+    },
+    {
+      "id": "865cfdd30e66",
+      "title": "Faculty of Science and Technology",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fst",
+      "found_at": "2026-05-24T13:58:03.426855",
+      "notified": false
+    },
+    {
+      "id": "4dd235d8a389",
+      "title": "Faculty of Business Administration",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fba",
+      "found_at": "2026-05-24T13:58:03.426840",
+      "notified": false
+    },
+    {
+      "id": "f2d8e1835017",
+      "title": "Faculty of Arts and Social Sciences",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fass",
+      "found_at": "2026-05-24T13:58:03.426835",
+      "notified": false
+    },
+    {
+      "id": "9edae094cc2c",
+      "title": "Faculty Publications",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/publications",
+      "found_at": "2026-05-24T13:58:03.426755",
+      "notified": false
+    },
+    {
+      "id": "5a1fb06a61a8",
+      "title": "Faculty List",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/Faculty-List",
+      "found_at": "2026-05-24T13:58:03.426684",
+      "notified": false
+    },
+    {
+      "id": "b4fc92df2a03",
+      "title": "Faculty of Science and\r\n                                                    Technology",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fst",
+      "found_at": "2026-05-24T13:58:03.426672",
+      "notified": false
+    },
+    {
+      "id": "64683de9a615",
+      "title": "Faculty of Health and Life Sciences",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fhls",
+      "found_at": "2026-05-24T13:58:03.426667",
+      "notified": false
+    },
+    {
+      "id": "35eb007c413c",
+      "title": "Faculty of Engineering",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/engg",
+      "found_at": "2026-05-24T13:58:03.426663",
+      "notified": false
+    },
+    {
+      "id": "5c33dacf141c",
+      "title": "Faculty of Business\r\n                                                    Administration",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fba",
+      "found_at": "2026-05-24T13:58:03.426657",
+      "notified": false
+    },
+    {
+      "id": "0b9ddfb54db6",
+      "title": "Faculty of Arts and Social\r\n                                                    Sciences",
+      "source": "American Intl Univ (AIUB)",
+      "institution": "American Intl Univ (AIUB)",
+      "url": "https://www.aiub.edu/faculties/fass",
+      "found_at": "2026-05-24T13:58:03.426642",
+      "notified": false
+    },
+    {
+      "id": "3904be12107e",
+      "title": "Dept. of CSE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://cse.uiu.ac.bd/",
+      "found_at": "2026-05-24T13:57:57.637176",
+      "notified": false
+    },
+    {
+      "id": "a766f9a15591",
+      "title": "Assistant Professor CSE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-cse-262/",
+      "found_at": "2026-05-24T13:57:57.637128",
+      "notified": false
+    },
+    {
+      "id": "d783aeaea8b8",
+      "title": "Associate Professor CSE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/associate-professor-cse-262/",
+      "found_at": "2026-05-24T13:57:57.637123",
+      "notified": false
+    },
+    {
+      "id": "b4b3476af409",
+      "title": "Professor CSE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/professor-cse-262/",
+      "found_at": "2026-05-24T13:57:57.637117",
+      "notified": false
+    },
+    {
+      "id": "5d33755a6fb0",
+      "title": "Lecturer Microbiology and Immunology",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-microbiology-and-immunology-262/",
+      "found_at": "2026-05-24T13:57:57.637111",
+      "notified": false
+    },
+    {
+      "id": "38b0ab09e053",
+      "title": "Assistant Professor Microbiology and Immunology",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-microbiology-and-immunology-262/",
+      "found_at": "2026-05-24T13:57:57.637096",
+      "notified": false
+    },
+    {
+      "id": "75e20d138d9b",
+      "title": "Lecturer EEE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-eee-262/",
+      "found_at": "2026-05-24T13:57:57.637082",
+      "notified": false
+    },
+    {
+      "id": "4f5f8aa64f69",
+      "title": "Assistant Professor EEE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-eee-262/",
+      "found_at": "2026-05-24T13:57:57.637077",
+      "notified": false
+    },
+    {
+      "id": "03dcadc41816",
+      "title": "Lecturer Pharmacy",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-pharmacy-261/",
+      "found_at": "2026-05-24T13:57:57.637067",
+      "notified": false
+    },
+    {
+      "id": "52d496567e5d",
+      "title": "Assistant Professor Pharmacy",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-pharmacy-261/",
+      "found_at": "2026-05-24T13:57:57.637060",
+      "notified": false
+    },
+    {
+      "id": "0292d3c2981e",
+      "title": "Faculty Members",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/academics/faculty-members/",
+      "found_at": "2026-05-24T13:57:57.636890",
+      "notified": false
+    },
+    {
+      "id": "8bbcdce692bd",
+      "title": "Faculty of Science &\r\n                                                    Technology",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fst",
+      "found_at": "2026-05-24T13:57:49.881668",
+      "notified": false
+    },
+    {
+      "id": "356f809abd9f",
+      "title": "Faculty of Arts & Social\r\n                                                    Sciences",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fass",
+      "found_at": "2026-05-24T13:57:49.881650",
+      "notified": false
+    },
+    {
+      "id": "25372980bc37",
+      "title": "Faculty of Science and Technology",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fst",
+      "found_at": "2026-05-24T13:57:49.881458",
+      "notified": false
+    },
+    {
+      "id": "ce48d520fe09",
+      "title": "Faculty of Business Administration",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fba",
+      "found_at": "2026-05-24T13:57:49.881445",
+      "notified": false
+    },
+    {
+      "id": "303cc4c2bcad",
+      "title": "Faculty of Arts and Social Sciences",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fass",
+      "found_at": "2026-05-24T13:57:49.881440",
+      "notified": false
+    },
+    {
+      "id": "2b08acefc1a0",
+      "title": "Faculty Publications",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/publications",
+      "found_at": "2026-05-24T13:57:49.881357",
+      "notified": false
+    },
+    {
+      "id": "6a3c7ae58fd0",
+      "title": "Faculty List",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/Faculty-List",
+      "found_at": "2026-05-24T13:57:49.881281",
+      "notified": false
+    },
+    {
+      "id": "e17a4f9b3ff6",
+      "title": "Faculty of Science and\r\n                                                    Technology",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fst",
+      "found_at": "2026-05-24T13:57:49.881267",
+      "notified": false
+    },
+    {
+      "id": "a152d1bb0b52",
+      "title": "Faculty of Health and Life Sciences",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fhls",
+      "found_at": "2026-05-24T13:57:49.881263",
+      "notified": false
+    },
+    {
+      "id": "4681a338238d",
+      "title": "Faculty of Engineering",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/engg",
+      "found_at": "2026-05-24T13:57:49.881258",
+      "notified": false
+    },
+    {
+      "id": "bfe8f350458a",
+      "title": "Faculty of Business\r\n                                                    Administration",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fba",
+      "found_at": "2026-05-24T13:57:49.881252",
+      "notified": false
+    },
+    {
+      "id": "e2d9509539b9",
+      "title": "Faculty of Arts and Social\r\n                                                    Sciences",
+      "source": "AIUB",
+      "institution": "AIUB",
+      "url": "https://www.aiub.edu/faculties/fass",
+      "found_at": "2026-05-24T13:57:49.881237",
+      "notified": false
+    },
+    {
+      "id": "3969dd7e49af",
+      "title": "Faculty Portal (RDS)",
+      "source": "North South Univ",
+      "institution": "North South Univ",
+      "url": "http://portal.northsouth.edu/",
+      "found_at": "2026-05-24T13:57:48.132407",
+      "notified": false
+    },
+    {
+      "id": "f498cdff9dd5",
+      "title": "ভেটেরিনারি মেডিসিন এন্ড এনিমেল সায়েন্স অনুষদের বিভাগসমূহে ও ইঞ্জিনিয়ারিং অনুষদের মেকানিক্যাল ইঞ্জিনিয়ারিং বিভাগে শিক্ষক নিয়োগ বিজ্ঞপ্তি।",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/%e0%a6%ad%e0%a7%87%e0%a6%9f%e0%a7%87%e0%a6%b0%e0%a6%bf%e0%a6%a8%e0%a6%be%e0%a6%b0%e0%a6%bf-%e0%a6%ae%e0%a7%87%e0%a6%a1%e0%a6%bf%e0%a6%b8%e0%a6%bf%e0%a6%a8-%e0%a6%8f%e0%a6%a8%e0%a7%8d%e0%a6%a1/",
+      "found_at": "2026-05-24T13:57:40.763549",
+      "notified": false
+    },
+    {
+      "id": "44d28dcdd96b",
+      "title": "কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং (সিএসই) বিভাগে ২০২৪-২০২৫শিক্ষাবর্ষে M.Sc (Engg.)/M.Engg. (CSE) প্রোগ্রামে ভর্তির জন্য আবেদনপত্র আহবান করা যাচ্ছে।",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/%e0%a6%95%e0%a6%ae%e0%a7%8d%e0%a6%aa%e0%a6%bf%e0%a6%89%e0%a6%9f%e0%a6%be%e0%a6%b0-%e0%a6%b8%e0%a6%be%e0%a6%af%e0%a6%bc%e0%a7%87%e0%a6%a8%e0%a7%8d%e0%a6%b8-%e0%a6%8f%e0%a6%a8%e0%a7%8d%e0%a6%a1/",
+      "found_at": "2026-05-24T13:57:40.763356",
+      "notified": false
+    },
+    {
+      "id": "fbf8d01aa58c",
+      "title": "Faculty of Veterinary Medicine and Animal Sciences",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://www.mbstu.ac.bd/faculty-of-veterinary-medicine-and-animal-sciences/",
+      "found_at": "2026-05-24T13:57:40.762611",
+      "notified": false
+    },
+    {
+      "id": "431e90462b95",
+      "title": "Faculty Detail",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-detail/",
+      "found_at": "2026-05-24T13:57:40.762557",
+      "notified": false
+    },
+    {
+      "id": "120790366fcf",
+      "title": "Faculty of Arts",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-of-arts/",
+      "found_at": "2026-05-24T13:57:40.762547",
+      "notified": false
+    },
+    {
+      "id": "2dde4bfec62f",
+      "title": "Faculty of Social Science",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-of-social-science/",
+      "found_at": "2026-05-24T13:57:40.762542",
+      "notified": false
+    },
+    {
+      "id": "9766a1cf5e5d",
+      "title": "Faculty of Business Studies",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-of-business-studies/",
+      "found_at": "2026-05-24T13:57:40.762532",
+      "notified": false
+    },
+    {
+      "id": "091029b813ba",
+      "title": "Faculty of Science",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-of-science/",
+      "found_at": "2026-05-24T13:57:40.762522",
+      "notified": false
+    },
+    {
+      "id": "1b4355ee8328",
+      "title": "Faculty of Life Science",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-of-life-science/",
+      "found_at": "2026-05-24T13:57:40.762505",
+      "notified": false
+    },
+    {
+      "id": "8f75b6b02518",
+      "title": "Computer Science and Engineering",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://cse.mbstu.ac.bd/",
+      "found_at": "2026-05-24T13:57:40.762492",
+      "notified": false
+    },
+    {
+      "id": "aaef6b887e5f",
+      "title": "Faculty of Engineering",
+      "source": "MBSTU",
+      "institution": "MBSTU",
+      "url": "https://mbstu.ac.bd/faculty-of-engineering/",
+      "found_at": "2026-05-24T13:57:40.762478",
+      "notified": false
+    },
+    {
+      "id": "1b92028eeb84",
+      "title": "ICT Cell, University of Chittagong",
+      "source": "Chittagong University",
+      "institution": "Chittagong University",
+      "url": "https://ictcell.cu.ac.bd",
+      "found_at": "2026-05-24T13:57:26.261840",
+      "notified": false
+    },
+    {
+      "id": "c7f59bb9deda",
+      "title": "Official Email for Faculty Members/Officers/Offices",
+      "source": "Chittagong University",
+      "institution": "Chittagong University",
+      "url": "https://ictcell.cu.ac.bd/offi-email/",
+      "found_at": "2026-05-24T13:57:26.261461",
+      "notified": false
+    },
+    {
+      "id": "be5c0f0a4104",
+      "title": "Create Faculty/Officer Profile in CU Webportal",
+      "source": "Chittagong University",
+      "institution": "Chittagong University",
+      "url": "https://ictcell.cu.ac.bd/web-profile/",
+      "found_at": "2026-05-24T13:57:26.261456",
+      "notified": false
+    },
+    {
+      "id": "ff4b5241ae9c",
+      "title": "International Adjunct Faculty",
+      "source": "Chittagong University",
+      "institution": "Chittagong University",
+      "url": "https://cu.ac.bd/international-adjunct-faculty/",
+      "found_at": "2026-05-24T13:57:26.260401",
+      "notified": false
+    },
+    {
+      "id": "92766bd5561e",
+      "title": "Faculty Profiles",
+      "source": "Chittagong University",
+      "institution": "Chittagong University",
+      "url": "https://cu.ac.bd/peopleresources/facultyprofile.php?secno=22&deptno=24",
+      "found_at": "2026-05-24T13:57:26.260380",
+      "notified": false
+    },
+    {
+      "id": "eb7662f50a74",
+      "title": "Faculty, Department/Institute",
+      "source": "Chittagong University",
+      "institution": "Chittagong University",
+      "url": "https://cu.ac.bd/faculty-dept-inst/",
+      "found_at": "2026-05-24T13:57:26.260356",
+      "notified": false
+    },
+    {
+      "id": "98aa21976f37",
+      "title": "ICT Center",
+      "source": "Rajshahi University",
+      "institution": "Rajshahi University",
+      "url": "https://www.ru.ac.bd/ictcenter/",
+      "found_at": "2026-05-24T13:57:23.053094",
+      "notified": false
+    },
+    {
+      "id": "681354b2c0b8",
+      "title": "Institute of Information Technology",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/institute/iit",
+      "found_at": "2026-05-24T13:57:20.403080",
+      "notified": false
+    },
+    {
+      "id": "fb27e7dc0bf7",
+      "title": "Faculty of Law",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/faculty/law",
+      "found_at": "2026-05-24T13:57:20.403071",
+      "notified": false
+    },
+    {
+      "id": "5223e92a2cca",
+      "title": "Faculty of Business Studies",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/faculty/business",
+      "found_at": "2026-05-24T13:57:20.403067",
+      "notified": false
+    },
+    {
+      "id": "943b5fa50101",
+      "title": "Faculty of Biological Sciences",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/faculty/biosci",
+      "found_at": "2026-05-24T13:57:20.403063",
+      "notified": false
+    },
+    {
+      "id": "1188066ce886",
+      "title": "Faculty of Social Sciences",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/faculty/socialsci",
+      "found_at": "2026-05-24T13:57:20.403059",
+      "notified": false
+    },
+    {
+      "id": "d58b9bd089c5",
+      "title": "Faculty of Mathematical & Physical Sciences",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/faculty/science",
+      "found_at": "2026-05-24T13:57:20.403055",
+      "notified": false
+    },
+    {
+      "id": "63b15ebfb86d",
+      "title": "Faculty of Arts & Humanities",
+      "source": "JU (Jahangirnagar)",
+      "institution": "JU (Jahangirnagar)",
+      "url": "https://www.juniv.edu/faculty/arts",
+      "found_at": "2026-05-24T13:57:20.403041",
+      "notified": false
+    },
+    {
+      "id": "930246dbf602",
+      "title": "Electrical & Computer Engineering",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ECE.ruet.ac.bd",
+      "found_at": "2026-05-24T13:57:13.996425",
+      "notified": false
+    },
+    {
+      "id": "4e3ba00a6603",
+      "title": "Computer Science & Engineering",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.CSE.ruet.ac.bd",
+      "found_at": "2026-05-24T13:57:13.996421",
+      "notified": false
+    },
+    {
+      "id": "51b7d794e54c",
+      "title": "ICT Ministry",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://ictd.gov.bd/",
+      "found_at": "2026-05-24T13:57:13.996402",
+      "notified": false
+    },
+    {
+      "id": "0b9b95ade255",
+      "title": "Faculty Short Info",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/teacher_list",
+      "found_at": "2026-05-24T13:57:13.996330",
+      "notified": false
+    },
+    {
+      "id": "57284f924f9b",
+      "title": "Faculty Members",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/teacher",
+      "found_at": "2026-05-24T13:57:13.996326",
+      "notified": false
+    },
+    {
+      "id": "fb0ec97fad00",
+      "title": "PublicationsofFaculty Members",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/publications",
+      "found_at": "2026-05-24T13:57:13.996310",
+      "notified": false
+    },
+    {
+      "id": "0491b699c416",
+      "title": "Faculty of Applied Science and Humanities",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/all-notice-circular/#",
+      "found_at": "2026-05-24T13:57:13.996261",
+      "notified": false
+    },
+    {
+      "id": "35fa3ddabcd4",
+      "title": "Faculty of Mechanical Engineering",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/all-notice-circular/#",
+      "found_at": "2026-05-24T13:57:13.996242",
+      "notified": false
+    },
+    {
+      "id": "fc91d2b8014b",
+      "title": "Faculty of Civil Engineering",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/all-notice-circular/#",
+      "found_at": "2026-05-24T13:57:13.996228",
+      "notified": false
+    },
+    {
+      "id": "019058b861a6",
+      "title": "Dept. of Electrical & Computer Engineering (ECE)",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ECE.ruet.ac.bd",
+      "found_at": "2026-05-24T13:57:13.996220",
+      "notified": false
+    },
+    {
+      "id": "fcb1ddf1478b",
+      "title": "Dept. of Computer Science & Engineering (CSE)",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.CSE.ruet.ac.bd",
+      "found_at": "2026-05-24T13:57:13.996216",
+      "notified": false
+    },
+    {
+      "id": "c927fdaa13e8",
+      "title": "Faculty of Electrical & Computer Engineering",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/all-notice-circular/#",
+      "found_at": "2026-05-24T13:57:13.996209",
+      "notified": false
+    },
+    {
+      "id": "706279c3441c",
+      "title": "Institute of Information and Communication Technology (IICT)",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.IICT.ruet.ac.bd",
+      "found_at": "2026-05-24T13:57:13.996179",
+      "notified": false
+    },
+    {
+      "id": "3978fafc5ddd",
+      "title": "Director of ICT Cell(ICT)",
+      "source": "RUET",
+      "institution": "RUET",
+      "url": "https://www.ruet.ac.bd/section/ICT",
+      "found_at": "2026-05-24T13:57:13.996129",
+      "notified": false
+    },
+    {
+      "id": "66f42e49a898",
+      "title": "Faculty Member\r\n                                            Profile",
+      "source": "Dhaka University",
+      "institution": "Dhaka University",
+      "url": "https://www.du.ac.bd/faculty_member",
+      "found_at": "2026-05-24T13:57:09.671922",
+      "notified": false
+    }
+  ],
+  "last_updated": "2026-05-24T13:58:25.136478"
+}
