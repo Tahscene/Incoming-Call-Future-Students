@@ -1,1 +1,7 @@
-{"jobs": [], "last_updated": ""}
+jobs = [{
+    "title": "Test Lecturer",
+    "institution": "Test University",
+    "source": "Test",
+    "url": "https://example.com",
+    "found_at": "2026-01-01"
+}]
