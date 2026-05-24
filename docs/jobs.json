@@ -1,6 +1,312 @@
 {
   "jobs": [
     {
+      "id": "c5850a115d1a",
+      "title": "📄 Download Job Description (PDF)",
+      "source": "Eastern University",
+      "institution": "Eastern University",
+      "url": "https://webapi.easternuni.edu.bd/media/career/Lecturer_CSE-1.pdf",
+      "found_at": "2026-05-24T15:36:56.920508",
+      "notified": false
+    },
+    {
+      "id": "16b7293f0d9f",
+      "title": "[Faculty Post] Visiting Faculty Members",
+      "source": "Uttara University",
+      "institution": "Uttara University",
+      "url": "https://www.uttara.ac.bd/visiting-faculty-members/",
+      "found_at": "2026-05-24T15:36:52.646938",
+      "notified": false
+    },
+    {
+      "id": "c59359b37741",
+      "title": "[Faculty Post] Faculty Members",
+      "source": "Uttara University",
+      "institution": "Uttara University",
+      "url": "https://www.uttara.ac.bd/faculty/",
+      "found_at": "2026-05-24T15:36:52.646919",
+      "notified": false
+    },
+    {
+      "id": "7d39b27fc513",
+      "title": "[Faculty Post] All Faculty Members",
+      "source": "Manarat Intl Univ",
+      "institution": "Manarat Intl Univ",
+      "url": "https://manarat.ac.bd/all-faculty-members/",
+      "found_at": "2026-05-24T15:36:50.722052",
+      "notified": false
+    },
+    {
+      "id": "caa4167d32ca",
+      "title": "Assistant Professor CSE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-cse-262/",
+      "found_at": "2026-05-24T15:36:32.195345",
+      "notified": false
+    },
+    {
+      "id": "36e080a022f3",
+      "title": "Associate Professor CSE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/associate-professor-cse-262/",
+      "found_at": "2026-05-24T15:36:32.195334",
+      "notified": false
+    },
+    {
+      "id": "8ccc1f82fba3",
+      "title": "[Faculty Post] Lecturer Microbiology and Immunology",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-microbiology-and-immunology-262/",
+      "found_at": "2026-05-24T15:36:32.195312",
+      "notified": false
+    },
+    {
+      "id": "5634f0ae0a1c",
+      "title": "[Faculty Post] Assistant Professor Microbiology and Immunology",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-microbiology-and-immunology-262/",
+      "found_at": "2026-05-24T15:36:32.195297",
+      "notified": false
+    },
+    {
+      "id": "0e25118f3e52",
+      "title": "[Faculty Post] Associate Professor Microbiology and Immunology",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/associate-professor-microbiology-and-immunology-262/",
+      "found_at": "2026-05-24T15:36:32.195283",
+      "notified": false
+    },
+    {
+      "id": "34b9db402782",
+      "title": "[Faculty Post] Lecturer EEE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-eee-262/",
+      "found_at": "2026-05-24T15:36:32.195257",
+      "notified": false
+    },
+    {
+      "id": "55d4804ec494",
+      "title": "[Faculty Post] Assistant Professor EEE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-eee-262/",
+      "found_at": "2026-05-24T15:36:32.195243",
+      "notified": false
+    },
+    {
+      "id": "37e9a4a4df78",
+      "title": "[Faculty Post] Associate Professor EEE",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/associate-professor-eee-262/",
+      "found_at": "2026-05-24T15:36:32.195227",
+      "notified": false
+    },
+    {
+      "id": "e9828c0444cb",
+      "title": "[Faculty Post] Lecturer Pharmacy",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-pharmacy-261/",
+      "found_at": "2026-05-24T15:36:32.195212",
+      "notified": false
+    },
+    {
+      "id": "4cb85b019086",
+      "title": "[Faculty Post] Assistant Professor Pharmacy",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/career/assistant-professor-pharmacy-261/",
+      "found_at": "2026-05-24T15:36:32.195195",
+      "notified": false
+    },
+    {
+      "id": "5120e514706f",
+      "title": "[Faculty Post] Faculty Members",
+      "source": "UIU",
+      "institution": "UIU",
+      "url": "https://www.uiu.ac.bd/academics/faculty-members/",
+      "found_at": "2026-05-24T15:36:32.194766",
+      "notified": false
+    },
+    {
+      "id": "828109cbdcb7",
+      "title": "[Faculty Post] Official Email for Faculty Members/Officers/Offices",
+      "source": "Chittagong Univ",
+      "institution": "Chittagong Univ",
+      "url": "https://ictcell.cu.ac.bd/offi-email/",
+      "found_at": "2026-05-24T15:36:02.272864",
+      "notified": false
+    },
+    {
+      "id": "e6008e5ed108",
+      "title": "Class-3 Employment Application Form",
+      "source": "Chittagong Univ",
+      "institution": "Chittagong Univ",
+      "url": "https://cu.ac.bd/assets/forms/ZM3W594HRD_3-Class%20Appointment%20Form%20-%20Copy.pdf",
+      "found_at": "2026-05-24T15:36:02.272703",
+      "notified": false
+    },
+    {
+      "id": "61bf96f0bc43",
+      "title": "বিস্তারিত দেখুন",
+      "source": "Chittagong Univ",
+      "institution": "Chittagong Univ",
+      "url": "https://cu.ac.bd/wp-content/uploads/2026/02/M.-PHIL-formwithcircular.pdf",
+      "found_at": "2026-05-24T15:36:02.270767",
+      "notified": false
+    },
+    {
+      "id": "a3f92a639532",
+      "title": "[Faculty Post] Faculty Member\n                                            Profile",
+      "source": "Dhaka University",
+      "institution": "Dhaka University",
+      "url": "https://www.du.ac.bd/faculty_member",
+      "found_at": "2026-05-24T15:35:44.157914",
+      "notified": false
+    },
+    {
+      "id": "b735007758e3",
+      "title": "Lakhimpur Girls College Recruitment 2021- 1 Assistant Professor Vacancy, Job Openings - The Sentinel - of this Land, for its People",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPTDhrMHlOVl82VUdYa01NaVF3U3hOWWhDZi1RblBqUVVOWVBsMTdYNmhsYV9nRFlyRXhrVlV3ZzBnWlFoNE1DRVdxWDk4TG1lVWJjNVJHWnlzT3JRUFRiSzhrVmx4YVk3bF9sUkhHTG1RUHFwVVh2bmxMZUhvLXl5dFphTUhPOF9BZG9oWmhaamtFdjB6RU9PRUZSdE4td0Y3QlpUcHczcU9salgxOEd1V3BydzdPSllyeEc1eGlFY2RJR2Z0dWVXUmtOeG0tZGV1YWVaQ2xRN2U5V2xrSkE?oc=5",
+      "found_at": "2026-05-24T15:35:41.583723",
+      "notified": false
+    },
+    {
+      "id": "f1b06c4b45b5",
+      "title": "MPPSC Assistant Professor Recruitment 2026: Notification out for 949 vacancies; check dates, eligibility, - The Times of India",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNcnhjemN1eXp0ZnV2dmR4NmxuLXJwa1NVN2F3Q3FtYXQyTE1WV2tjV3pJNnBWLVJPZ040ZTdCMEUxeHo2YW02dVE2c05ya3V6TjBkeml1SHhzSDJ1MTZNOGRHb0s0WFlhM2I2LW8zalNQNjBrMDROZjJRRm9iWG5WNGNmVmFhRlpfdDlabnRZUUlUYUk0TXZna3ZrVGR2cVhROUlobVlvT09GSkFEOEhMXzRFSzJlOVV0dV9SVVZteGNhQWxaY2R3SHpBeGJqXzFzaXI0Ym1pWEMyT2xDbVZBWXE0eWl4eXQxemMxMHVPaVBJYjVQTWJvVURWaGZQd1ctNWJrb1E2V29iYnQycnRSbEFpbkVEbFFBTVRHMmRiZ0NpdVlWSDkzTdIBrgJBVV95cUxNdEFselhsbXBXcm9BcmNKMzd6MXZYU2toOVRCVkd2WmlBX1E0a0hwbnJKUnR4X1BUVzhPQVkzcVozTXF1Vzk2Ym5vc2w5Q2RGNHRKa3BkZXNFVllLUzdLSUlDQ0VpS1lBeFpMSVBWa2xjbGZJWXM4ZVVDb0J4cndrRWYtdHlqS2hJTzRDZFlCM3MxRU9OejJvaU1Ncm82LU94TFZDWWRSSmE2U2trbHZkeGZVZ2hxQTY1VHBtTkt5d1AyX0JUNURFcWRtWFhkcWVSU3R2Nk4wLVF5V1pwMVpMemNZaUtiOW0tWF9KclVhMDhHZlVYT0hoM3A5VGdycTh2eXEwcGVyR3hkcWhHTnpzbktjQVgxdkJ1S2F1RkdkeVh1OUJURzdNR0JVNDN6dw?oc=5",
+      "found_at": "2026-05-24T15:35:41.583501",
+      "notified": false
+    },
+    {
+      "id": "33f6669e034e",
+      "title": "Govt abolishes senior lecturer post in updated MPO policy - bdnews24.com",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBpR3h3T2lGSHo2R1UxQ3JqckNNcmhYU0VfbDZWQlRGdTB2R2dnT0NDRjAwN0RZbWV3RFVsVG1fdGZ0aDR6bjdJSmcyN0p6bUZKMVBmekFiOA?oc=5",
+      "found_at": "2026-05-24T15:35:41.583407",
+      "notified": false
+    },
+    {
+      "id": "9a013c3c34cf",
+      "title": "APPSC Assistant Professor recruitment 2026: Apply online for 145 posts, direct link here - The Times of India",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQOFZOb2U1bFNkOFQ5aVF4cnc0X0pOWmtHRk1OQmhiTjdtbVQxOXhMNmJONXF3bWZLMEpMc0xEeFlEVnl5dFg2WHVLRHh6bFhGLTNlalRQVUpGanhCSWgxMExMbm9PeG9YVHJpREFXTW5WWGNJU3I0bndPOXVwTTA1dDN2T25taVpHdEF6VFI2R01JSDI0ajVwZXMxa1Z6dktPLUoyOVUzbzRzTk1KZmVVWGJPMDVjYWpIYWJBb0ctRXdlbUVINVE2aE5pNld1ajlkSG1PTlhOempUSk1SckUyZlZVcEwtX2l3SlBfM3h6ZFlMNTNXeUHSAfsBQVVfeXFMT0pTQ29KN2dXdmlMZklUMlkwNFM1dXZVY0twMzJqREcxSjVyVmdRaWlFZ0JSalVlYzhZS2RzTGNzTlpmRlBSYmZXaklnbVpLdTQ3Nmx5SGUtRGtCVHVTcWh6Vl9yV25TNWhfbm01MU4yNG1fa2xHWnU4eGJvczJsSkwyOWRVdkE4TUl5dHlpM3I3WEszQU9WVEtHdW5hMWQ3VS1UNlNwdWJVc1pORnNmcEtHdWE5Wl9nZGJsdlFBZmFmeWYzSVJPQUNKWlVYSkpCMVQwVnZMTlFRWVNXY1JiM1llT2hlUXZoOEloZ1BJUG1ldXF5d0w2REVNTkE?oc=5",
+      "found_at": "2026-05-24T15:35:41.583398",
+      "notified": false
+    },
+    {
+      "id": "0e629326a5bb",
+      "title": "United International University is looking for lecturer candidates - The Financial Express",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON25RVUp0LXJLTlk4S2IwLUUwTmxJMmRkM21ETXJJSENlRjR4M3JDQXZEUEFRQ0I0RjQ4alVrZ05yUmhqek1fa0taUlBXZVdiM1BreTJUdHRjRTF5OWZhdHlTZVR1d2IzX1JpTjlOVkNnUE9raXRGODZERDhhX2F6anJua096bUlzV3gxMWR1UG9PelFodF92d3NrUnlEZUY0aVpHYlE5ajV1S2NrUlpkaWFzT0VnQQ?oc=5",
+      "found_at": "2026-05-24T15:35:41.583273",
+      "notified": false
+    },
+    {
+      "id": "4613429ba2a3",
+      "title": "The University of Asia Pacific is seeking Lecturer to join their Civil Engineering department - The Financial Express",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNkpBbW84S1BZT2l5VTVYNzl5THlsNWZXWHJtX1dydUwtZVhKWFN2dW9SMERDWHpYTXRBeE1tNF8xTUVXUG1PNlcyS3FsZ29HX0RRV1B2ZnIyRmZPUHN3NVFvbGhkLVJfUHllbFNTek1GZ3VrWTY3Y0x2b25BcThfS0wtVU9vb3JMeFFJd1dDNjFsYmlYSDNqT0N6MmQxb0RwT2RHRERyNHFrbzJTM1phbHNGbXVUOHRGVzJQN1lHNnQ5czItRzBLRTFTLW9GU2hUQmVWdF8yNGh1N1FZSlNrVU1pdjYydw?oc=5",
+      "found_at": "2026-05-24T15:35:41.583151",
+      "notified": false
+    },
+    {
+      "id": "a7eb846c4a81",
+      "title": "JPSC Polytechnic Lecturer Notification 2026 Out, 349 Vacancy, PDF Download, Apply Online - The Times of India",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQckFhcGxWdkhsa2FqMmdYQVRlMVg0cGk3SV9YZjJ0WGNWeW00S0x0aDdLbWlpcFp5ZHZ0bFVObXhaQ193dTBkb0tuYWxSQ2t3c2hlLVRSVm8zQUd1SFBWQ2Vad1dFMW9ILWk5R096RWpWb2tzcDZfMkpWWHBPQmhuaVdpNFlPcFJTREhWR2Q1SmdjODR5YXpLVXFvRHM2UFlwN3JUM2p1Mk9CNTg3ZHBJcU56OG5zQmVlMVp5TFVzcWlxc3ZseHhJQzFNcTg5b3ZGdFJRYUhCMklHQ3ZwY2FjUUFZM2ZxYTI2Q1RVXzZ2U3N3bkZo0gH6AUFVX3lxTE5nTENuSUEzRmhfb09sbF9RV0plZ1R2NFB3aU5UbkpqbjB0czFYTGRMLXdkaGNrOEZUcDNWdk5NejU4RDRKODFMUVNVaDJpRmVMTUp5cUlIUmNadWc5cjVQLWM4U3FPeUxDUVhvT2oxMGlPWmhYYnh2X3hFMV93NGIxZzVFRldQQTFpR3pDb18tMDdmcEtiRWhMLW4zWjJjMVJMeVhPZTVNb3ZzRmR4WGhiSmRXdUhPcTZYWUdTdHZtS2xnVUlxT3h3WXc2TFp4YU9LSmhoUmpLRE9WY1pCdDZLWnpPNXdOd1dLZGdWR09LMHQ3R0VNVW8tamc?oc=5",
+      "found_at": "2026-05-24T15:35:41.583105",
+      "notified": false
+    },
+    {
+      "id": "333f81a30722",
+      "title": "Chennai's Anna University to ban over 2,000 faculty members - The Times of India",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNSjBwX0ZqYU1wVXh5VThITDhFUUxDZ0ZVbXozSEt6dC1iUVN5ZDQ4S2o3UGJhMkxOd3BUUnduZm82dm9OQUdBRlZEeHhmbWdoZEtwVGNCQ1JHMXpjS3diOHdiWHFHdVAwTGpjTlhoWjI2V1hZVFZFXzFkbjA3WUxxUDd6WERjUXJ2bEFuaFdpX0U3aGh4T19jUTJCZzlkejFzT0J6ZjlqZVhaYXBPWm56cGd5ajFYYXVKLXpvMS1jMXYyXzlpeVdFWXdR0gHPAUFVX3lxTFBTX3hDekRWWnJuZ2wwVloyUzZoOGJoTFQ5OEhfdk9RVF9vYUphS05ZNjdObEthcGMtd3RuSTVaZ0tnaTFGbFJEQVl2bkZUd1NzbUoyb0JENkVsM1JhTUFfMzV3YXN5c3hFclM1bUNFZkVMbnpxUUdvX0Y2aVFXSmRZUklvQ0QwQnl2azZUdUJMN2NfcllISk1DSjAxcGVCZzhkUzlJbjA1YWV6N1hpZ2doeFphSmZKZVRSNTBkTUYyazNhT1FJbHdRcGFyNmhISQ?oc=5",
+      "found_at": "2026-05-24T15:35:40.618476",
+      "notified": false
+    },
+    {
+      "id": "8d8ba13bc9b9",
+      "title": "Multiple faculty positions open at National University of Bangladesh - The Financial Express",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPTWxIOGM4YTkydjVqRkg4dlJYNnFPMEIwNmJtSUNmR3NnT3VueDdxcDQzTFRobm9oZlpFVVlmWmwzN3RaN2x2MXpWa0hCTFZrNE54RlZjZ3VUVUQ0SG5UbjlkdGFYdk9Yak1LRDRITmFMSUNrajRLdVp2dkk4X1lZaF9jX2pxQXZXSGtYbGVQaGNlSnQxUXpxSjJickxRUE5OZTFpX2tTbUY5TC1wbGVKVk9MVWNoQlBnNmIyNmwyMHo1ME9BZFB2RFpmWUJFSVBwU2Iw?oc=5",
+      "found_at": "2026-05-24T15:35:39.706909",
+      "notified": false
+    },
+    {
+      "id": "307d0277d093",
+      "title": "Campus welcomes new faculty members - News at IU",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTk1CVHF5TlhTZFlVaURydVk2RGM1R2JoN0w0a05Pc1Jmby1QbmNvU2t1QWMwaUl3SDNURnF2R20zTlVfMjVEc0NnczhCd2ZxdW52Tk1ZT29vV2ZUaTR0cEcyWVB4U2VfSndBbkxRelAwYzQ4UElJeHpWSGY0M2xWMDRQRTc?oc=5",
+      "found_at": "2026-05-24T15:35:39.706406",
+      "notified": false
+    },
+    {
+      "id": "4d8e52972741",
+      "title": "Five New Faculty Members Join the Ranks at the Halıcıoğlu Data Science Institute - UC San Diego Today",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZXZKQ0trT2NBcFVGajNQcFdGUi1YTDZQNmVwYmpUVDNYcGR1dkk3QkV4d0ZtTnpVQjNMVGE1Y2hqaFZCc01jNUxuMGF0OUpvalpZYl9DR0hBNWpFRGYwMEhnamZXWDRPQnZkTWVEYjRwa0otWE50enNaeHhvakVyaWE0RFRyRW4wakJMQVZ2Wnd2Yi1OMWl2cER1Z3BnQ0d6NlZwZnBQb1hkdw?oc=5",
+      "found_at": "2026-05-24T15:35:39.706273",
+      "notified": false
+    },
+    {
+      "id": "bfa37fd79cdc",
+      "title": "Ten New Tenure-Track Faculty Members Join Trinity College - trincoll.edu",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeWVibks1N29uQUJuajdVeEM4RHVEQXpqbnRkWEhGWjVaZXBfQ0xaZE5JazVvcW5ValN0QkJqdzV0QWZvb2VaZW0wSFhrS0xTdGFSZVI5M0NJYWFnZkxUSVAyNGlzdS1JQ1dTbGpuUmZuMnQ3U1dnLUpfNzhoUzhNQ1pZd2Z4U0dwLXp1dFNvaGdYZw?oc=5",
+      "found_at": "2026-05-24T15:35:39.706209",
+      "notified": false
+    },
+    {
+      "id": "ee2dc50adc15",
+      "title": "JPSC Lecturer Recruitment 2026 - Apply Online for 349 Posts - FreeJobAlert.Com",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOekhaTUhnYjYxczZaWWdWLWFOQXVZcUVjMG1ZOURaeW82S0F2bDQ4aldUOElPU0VyaGQtc1d3ZlZab25ZMk5SRWJCM3AzYnNQSmZGWGdvM210WmFTQklBZGF6aHpNcmNqTk5xbFRjSDN0VUE0aHZ1b0ZGZWFuOUZPV0xWbkdvQ01oeHNtV01JUHZOcWJ2aWgzM1ZyeDRiUkhIVmlZRFJB?oc=5",
+      "found_at": "2026-05-24T15:35:38.780806",
+      "notified": false
+    },
+    {
+      "id": "a7c39e03de86",
+      "title": "UPPSC Polytechnic Lecturer Exam Date 2026 Out for 513 Vacancies, Exam Pattern - Career Power",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNakRSdDVYdGlYdXFlWUFRSG9PM2wwTlg3T1ZVdUd2ZXphdUpsWEVGd2Z0WElvdEJwaFBHSjZyTzh1NDA1dTJVTXpiM2dhMXdBMjAxNjd2V05sTmVYV3NJbXo4UURORnprazFROFdwRE84cHRDcHVLTEJmcC02a1JINw?oc=5",
+      "found_at": "2026-05-24T15:35:38.780795",
+      "notified": false
+    },
+    {
+      "id": "575c9552bb2c",
+      "title": "Computer Science welcomes 17 new faculty members - Siebel School of Computing and Data Science",
+      "source": "Google News",
+      "institution": "See link",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9RNi05UFpVTmNMdUF3ZVJvNVYySzh6bEVJNEZGaFhlUVExUVB5SDhzaDlKc3c3YmJucExvT2lLTDhfZjJqLS1ydFBKakk2SXltZUxORXh3dlc1ZW5hbzA4?oc=5",
+      "found_at": "2026-05-24T15:35:38.780164",
+      "notified": false
+    },
+    {
       "id": "904182f559d4",
       "title": "Dept. of Computer Science & Information Technology (CSIT)",
       "source": "Victoria University",
@@ -847,5 +1153,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-05-24T14:33:49.290116"
+  "last_updated": "2026-05-24T15:37:10.349189"
 }
