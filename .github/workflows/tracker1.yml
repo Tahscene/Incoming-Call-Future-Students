@@ -2,7 +2,7 @@ name: CSE Lecturer Job Tracker
 
 on:
   schedule:
-    - cron: "0 */2 * * *"   # every 2 hours
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -12,22 +12,30 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r requirements.txt
-      - run: pip install requests beautifulsoup lxml
-      - run: python scraper.py
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: Run scraper
+        run: python scraper.py
+
       - name: Notify Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python notifier.py
+
       - name: Build dashboard HTML
         run: python build_dashboard.py
-      - name: Commit results
+
+      - name: Commit & push
         run: |
           git config user.name "tracker-bot"
           git config user.email "bot@noreply.github.com"
