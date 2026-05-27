@@ -18,12 +18,15 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
+      - run: pip install requests beautifulsoup lxml
       - run: python scraper.py
       - name: Notify Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python notifier.py
+      - name: Build dashboard HTML
+        run: python build_dashboard.py
       - name: Commit results
         run: |
           git config user.name "tracker-bot"
