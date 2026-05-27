@@ -120,10 +120,11 @@ BDJOBS_API_SEARCHES = [
 ]
 
 BDJOBS_RSS_URLS = [
-    "https://jobs.bdjobs.com/rss/rss.asp?fcat=10&txtsearch=lecturer+CSE",
-    "https://jobs.bdjobs.com/rss/rss.asp?fcat=10&txtsearch=lecturer+computer",
-    "https://jobs.bdjobs.com/rss/rss.asp?fcat=10&txtsearch=lecturer+IT",
+    "https://jobs.bdjobs.com/rss/rss.asp?fcat=10&txtsearch=lecturer",
+    "https://jobs.bdjobs.com/rss/rss.asp?fcat=10&txtsearch=senior+lecturer",
+    "https://bdjobs.com/rss/rss.asp?fcat=10&txtsearch=lecturer",
     "https://bdjobs.com/rss/rss.asp?fcat=10",
+    "https://jobs.bdjobs.com/rss/rss.asp?fcat=10",
 ]
 
 def scrape_bdjobs():
@@ -180,15 +181,35 @@ def scrape_bdjobs():
             soup_d = BeautifulSoup(desc, "lxml")
             desc_text = soup_d.get_text(" ", strip=True)
 
-            if not is_valid_job(title, desc_text): continue
+            # BDJobs education RSS is already category-filtered.
+            # Accept if title has "lecturer" — CSE check done via job page fetch.
+            if not is_lecturer(title + " " + desc_text):
+                continue
+            if is_rejected(title):
+                continue
             found_at = parse_date(pub)
             if not is_recent(found_at): continue
+
+            # Try to get institution + department from description
+            soup_d2 = BeautifulSoup(desc_text, "lxml")
+            inst = soup_d2.get_text(" ", strip=True)[:80] or "BDJobs"
+
+            # If neither title nor desc mentions CSE, fetch job page briefly
+            if not is_cse(title + " " + desc_text):
+                try:
+                    jp = SESSION.get(link, timeout=8)
+                    page_text = BeautifulSoup(jp.content, "lxml").get_text(" ")[:3000]
+                    if not is_cse(page_text):
+                        continue   # really not CSE
+                    # Extract institution from page
+                    inst_match = re.search(r"(university|college|institute)[^
+]{0,60}", page_text, re.I)
+                except Exception:
+                    pass   # if fetch fails, include anyway (better to show than miss)
 
             jid = make_id(title, link)
             if jid in seen: continue
             seen.add(jid)
-
-            inst = desc_text[:80] if desc_text else "BDJobs"
             jobs.append({"id":jid,"title":title,"source":"BDJobs","institution":inst,
                          "url":link,"deadline":"","found_at":found_at,"notified":False})
         time.sleep(0.5)
