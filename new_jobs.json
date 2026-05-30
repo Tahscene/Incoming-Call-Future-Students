@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "0c5eaa96f0d4",
+    "title": "Nazneen Akhter - Bangladesh University of Professionals",
+    "institution": "Web",
+    "source": "Web",
+    "url": "https://bup.edu.bd/faculty-member/details/271",
+    "deadline": "",
+    "found_at": "2026-05-30T22:59:02.093880+00:00",
+    "notified": false
+  },
+  {
+    "id": "4fdb7bd6f561",
+    "title": "Multiple Open Rank Faculty Positions - BRAC University",
+    "institution": "BRAC University",
+    "source": "BRAC University",
+    "url": "https://www.bracu.ac.bd/multiple-open-rank-faculty-positions",
+    "deadline": "",
+    "found_at": "2026-05-30T22:59:02.093985+00:00",
+    "notified": false
+  }
+]
