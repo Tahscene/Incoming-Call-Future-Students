@@ -1,36 +1,29 @@
 name: CSE Lecturer Job Tracker
-
 on:
   schedule:
     - cron: "0 */2 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install
         run: pip install requests beautifulsoup4 lxml
-
       - name: Scrape + Notify
         env:
+          SERPER_API_KEY:     ${{ secrets.SERPER_API_KEY }}   # ← এটা add করা হয়েছে
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scraper.py
-
       - name: Build dashboard
         run: python build_dashboard.py
-
       - name: Commit & push
         run: |
           git config user.name "tracker-bot"
