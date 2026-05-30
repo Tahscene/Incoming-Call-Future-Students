@@ -1,6 +1,36 @@
 {
   "jobs": [
     {
+      "id": "a71d7b17b8e5",
+      "title": "Apply for the position",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://su.edu.bd/career/online_apply",
+      "deadline": "",
+      "found_at": "2026-05-30T13:41:56.704604+00:00",
+      "notified": false
+    },
+    {
+      "id": "1a66da529e66",
+      "title": "Lecturer (CSE) Organization: Grameen University Location: Dhaka ...",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://www.instagram.com/p/DXLnmsHmjva/",
+      "deadline": "26 April 2026",
+      "found_at": "2026-05-30T13:41:55.679640+00:00",
+      "notified": false
+    },
+    {
+      "id": "7984091bf07e",
+      "title": "Islamic University of Technology (IUT)",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://hotjobs.bdjobs.com/jobs/iut/iut69.htm",
+      "deadline": "",
+      "found_at": "2026-05-30T13:41:51.280607+00:00",
+      "notified": false
+    },
+    {
       "id": "1c7c90de8e92",
       "title": "Faculty Positions Open at UIU – CSE Department United ...",
       "institution": "Web",
@@ -351,5 +381,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-05-30T10:03:04.123945+00:00"
+  "last_updated": "2026-05-30T13:42:50.174637+00:00"
 }
