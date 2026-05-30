@@ -1,11 +1,19 @@
 """
-BD CSE Lecturer Tracker v8 — Fixed Filters
-==========================================
-FIXES:
-1. ONLY "Lecturer" positions (removed assistant/associate professor)
-2. University scraper: fetches job detail page to get dept info
-3. BDJobs: two-pass — title-only OR title+desc combined check
-4. Serper: searches BDJobs specifically for lecturer+CSE
+BD CSE/IT Lecturer Tracker v9 — STRICT FILTER
+==============================================
+ONLY shows:
+  ✅ Lecturer / Senior Lecturer positions only
+  ✅ CSE / IT / Computer Science / Software Engineering dept only
+  ✅ Active jobs (future deadline OR no deadline mentioned)
+  ✅ Real job postings from BDJobs + university sites only
+
+REJECTS:
+  ❌ EEE, Pharmacy, Nursing, English, MBA, etc.
+  ❌ Instagram, Facebook, LinkedIn posts
+  ❌ Professor / Assistant Professor / Associate Professor
+  ❌ Faculty list pages, vague titles like "We Are Hiring"
+  ❌ Jobs with past deadlines
+  ❌ Just a university name with no position title
 """
 
 import requests, json, os, hashlib, re, time
@@ -13,7 +21,6 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
-import xml.etree.ElementTree as ET
 
 DATA_FILE      = "docs/jobs.json"
 SERPER_KEY     = os.environ.get("SERPER_API_KEY", "")
@@ -26,94 +33,210 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
 }
-MAX_AGE_DAYS = 45
 
-# ── ONLY lecturer-level positions ─────────────────────────────────────────────
-# Removed: assistant professor, associate professor, faculty position
-# (তুমি শুধু Lecturer চাও)
+# ── ONLY these position words accepted ───────────────────────────────────────
 LECTURER_WORDS = [
     "lecturer",
     "senior lecturer",
-    "adjunct lecturer",
-    "visiting lecturer",
     "লেকচারার",
     "প্রভাষক",
 ]
 
-# ── CSE/IT signals ─────────────────────────────────────────────────────────────
+# ── CSE/IT department signals ─────────────────────────────────────────────────
+# EEE deliberately NOT here
 CSE_WORDS = [
-    "computer science",
     "computer science and engineering",
     "computer science & engineering",
+    "computer science",
     "computer engineering",
-    " cse",
-    "cse ",
-    "(cse)",
-    "/cse",
-    "cse,",
+    "cse",
     "information technology",
-    " it ",
     "software engineering",
-    "ict",
-    "computing",
+    "computing & information",
+    "computing and information",
     "computational science",
     "school of data",
     "data science",
     "it department",
-    "কম্পিউটার",
+    "dept. of cse",
+    "dept of cse",
+    "কম্পিউটার বিজ্ঞান",
     "তথ্য প্রযুক্তি",
 ]
 
-# ── Hard reject ────────────────────────────────────────────────────────────────
-REJECT = [
-    "faculty list", "faculty of ",
-    "b.sc in", "m.sc in", "bsc in", "msc in",
-    "admission", "scholarship", "result", "exam routine",
-    "seminar", "workshop", "webinar",
-    "microbiology", "pharmacy", "nursing", "english", "economics",
-    "mathematics", "physics", "chemistry", "biology", "botany",
-    "zoology", "geography", "history", "political", "sociology",
-    "business administration", "mba", "bba", "finance", "accounting",
-    "fashion", "nutrition", "food",
-    "lakhimpur", "mppsc", "appsc", "jpsc", "uppsc",
-    "anna university", "uc san diego", "boston university",
-    "trinity college", "united states", "australia", "canada", "india",
+# ── Hard reject departments ───────────────────────────────────────────────────
+REJECT_DEPT_PATTERNS = [
+    r"\beee\b", r"\belectrical\b", r"\belectronics\b", r"\bmechanical\b",
+    r"\bcivil\b", r"\btextile\b", r"\bpharmacy\b", r"\bnursing\b",
+    r"\bmicrobiology\b", r"\bbiochemistry\b", r"\bbiotechnology\b",
+    r"\benglish\b", r"\bbangla\b", r"\bhistory\b", r"\bpolitical\b",
+    r"\bsociology\b", r"\beconomics\b", r"\bmathematics\b", r"\bphysics\b",
+    r"\bchemistry\b", r"\bbiology\b", r"\bbotany\b", r"\bzoology\b",
+    r"\bgeography\b", r"\blaw\b", r"\barchitecture\b", r"\bfinance\b",
+    r"\baccounting\b", r"\bmba\b", r"\bbba\b", r"\bbusiness administration\b",
+    r"\bmarketing\b", r"\bfashion\b", r"\bnutrition\b", r"\bfood technology\b",
+    r"\bagriculture\b", r"\bveterinary\b", r"\bmedicine\b", r"\bdental\b",
+    r"\bpublic health\b", r"\bislamic studies\b", r"\barabic\b",
+]
+
+# ── Hard reject position/page types ──────────────────────────────────────────
+REJECT_TYPE = [
+    "professor",        # catches assistant/associate/visiting professor
+    "visiting faculty",
+    "faculty list",
+    "faculty members",
+    "faculty of ",
+    "faculty profile",
+    "faculty & ",
+    "we are hiring",
+    "now hiring",
+    "join our team",
+    "current vacancies",
+    "open positions",
+    "career opportunities",
+]
+
+# ── Reject noisy/untrusted sources ───────────────────────────────────────────
+REJECT_SOURCE = [
+    "instagram.com",
+    "facebook.com",
+    "twitter.com",
+    "x.com",
+    "tiktok.com",
+    "linkedin.com",
+    "bdjobshour",
+    "jobghor24",
+    "ejobsbd",
+    "bdgovtjob",
+    "careerbangladesh",
+    "careerzonebangladesh",
+    "chakri.com.bd",
+    "jobcircularbd",
+    "bdcircular",
+]
+
+# ── Vague title patterns ──────────────────────────────────────────────────────
+VAGUE_TITLE = [
+    r"^[a-z][a-z\s\.]+ university bangladesh?$",
+    r"^[a-z][a-z\s\.]+ university$",
+    r"^[a-z][a-z\s\.]+ college$",
+    r"^#\w",
+    r"^we are hiring$",
+    r"^now hiring$",
+    r"^eee[-\s]?lec",
+    r"^\w{1,5}$",
 ]
 
 def make_id(title, url):
-    return hashlib.md5(f"{title.lower()[:50]}{url[:30]}".encode()).hexdigest()[:12]
+    return hashlib.md5(f"{title.lower()[:60]}{url[:30]}".encode()).hexdigest()[:12]
 
-def is_lecturer(text):
+def has_lecturer(text):
     t = text.lower()
     return any(w in t for w in LECTURER_WORDS)
 
-def is_cse(text):
-    t = " " + text.lower() + " "   # pad so " cse " matches at boundaries
+def has_professor(text):
+    return "professor" in text.lower()
+
+def has_cse(text):
+    t = text.lower()
     return any(w in t for w in CSE_WORDS)
 
-def is_rejected(text):
+def is_bad_dept(text):
     t = text.lower()
-    return any(r in t for r in REJECT)
+    return any(re.search(p, t) for p in REJECT_DEPT_PATTERNS)
 
-def is_valid(title, desc=""):
+def is_bad_type(text):
+    t = text.lower()
+    return any(r in t for r in REJECT_TYPE)
+
+def is_bad_source(url):
+    u = url.lower()
+    return any(s in u for s in REJECT_SOURCE)
+
+def is_vague_title(title):
+    t = title.strip().lower()
+    for pat in VAGUE_TITLE:
+        if re.match(pat, t):
+            return True
+    return False
+
+def deadline_is_past(text):
+    """True if a deadline is explicitly mentioned AND already passed today."""
+    months = {
+        "jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
+        "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12
+    }
+    today = datetime.now(timezone.utc).date()
+    patterns = [
+        r"(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[\s,]+(\d{4})",
+        r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{1,2}),?\s+(\d{4})",
+        r"deadline[:\s]+(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[\s,]+(\d{4})",
+    ]
+    for pat in patterns:
+        m = re.search(pat, text.lower())
+        if m:
+            try:
+                g = m.groups()
+                if g[0].isdigit():
+                    day, mon, yr = int(g[0]), months[g[1][:3]], int(g[2])
+                else:
+                    mon, day, yr = months[g[0][:3]], int(g[1]), int(g[2])
+                if datetime(yr, mon, day).date() < today:
+                    return True
+            except:
+                pass
+    return False
+
+def is_valid_job(title, desc="", url="", is_bdjobs=False):
     """
-    A job is valid if:
-    - Has a lecturer-level position word (anywhere in title+desc)
-    - Has a CSE/IT signal (anywhere in title+desc)
-    - Not rejected
-    Title alone is checked first; if it passes on its own, no desc needed.
+    Core validation. Returns True only for real active CSE/IT Lecturer postings.
+    is_bdjobs=True relaxes CSE check slightly since BDJobs category filter already
+    ensures education/lecturer context.
     """
-    if len(title) > 220 or len(title) < 5:
+    if not title or len(title) < 6 or len(title) > 220:
+        return False
+
+    # Source check
+    if is_bad_source(url):
+        return False
+
+    # Vague title
+    if is_vague_title(title):
         return False
 
     combined = f"{title} {desc}"
 
-    if is_rejected(combined):
+    # Wrong dept
+    if is_bad_dept(title):   # title only — desc might mention other depts
         return False
 
-    return is_lecturer(combined) and is_cse(combined)
+    # Wrong position type
+    if is_bad_type(combined):
+        return False
 
-def is_recent(iso, days=MAX_AGE_DAYS):
+    # Must have lecturer word, must NOT have professor
+    if not has_lecturer(combined):
+        return False
+    if has_professor(title):  # title only — "Lecturer & Assistant Professor" in title = reject
+        return False
+
+    # CSE check:
+    # For BDJobs URLs: if title has any CSE word OR desc has CSE word → accept
+    # For other URLs: combined must have CSE word
+    if is_bdjobs:
+        if not has_cse(combined):
+            return False
+    else:
+        if not has_cse(combined):
+            return False
+
+    # Past deadline
+    if deadline_is_past(combined):
+        return False
+
+    return True
+
+def is_recent(iso, days=45):
     try:
         dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
         now = datetime.now(timezone.utc)
@@ -123,15 +246,9 @@ def is_recent(iso, days=MAX_AGE_DAYS):
     except:
         return True
 
-def parse_date(raw):
-    try:
-        return parsedate_to_datetime(raw).isoformat()
-    except:
-        return datetime.now(timezone.utc).isoformat()
-
 def extract_deadline(text):
     m = re.search(
-        r"(?:deadline|last date|apply by|application deadline)[:\s]+"
+        r"(?:deadline|last date|apply by)[:\s]+"
         r"([A-Za-z]+ \d{1,2},?\s*\d{4}|\d{1,2}[\s\-][A-Za-z]+[\s\-]\d{4})",
         text, re.I
     )
@@ -150,56 +267,63 @@ def save(data):
 
 def _source_name(url):
     u = url.lower()
-    m = {
-        "bdjobs.com":           "BDJobs",
-        "bracu.ac.bd":          "BRAC University",
-        "northsouth.edu":       "North South University",
-        "uiu.ac.bd":            "UIU",
-        "aiub.edu":             "AIUB",
-        "ewubd.edu":            "East West University",
-        "iub.edu.bd":           "IUB",
-        "aust.edu":             "AUST",
-        "daffodilvarsity":      "Daffodil University",
-        "thefinancialexpress":  "Financial Express",
-        "thedailystar":         "The Daily Star",
-        "tbsnews":              "TBS News",
-        "bdnews24":             "BD News 24",
-        "dhakatribune":         "Dhaka Tribune",
-        "prothomalo":           "Prothom Alo",
-        "newagebd":             "New Age",
+    mapping = {
+        "bdjobs.com":          "BDJobs",
+        "bracu.ac.bd":         "BRAC University",
+        "northsouth.edu":      "North South University",
+        "uiu.ac.bd":           "UIU",
+        "aiub.edu":            "AIUB",
+        "ewubd.edu":           "East West University",
+        "iub.edu.bd":          "IUB",
+        "aust.edu":            "AUST",
+        "daffodilvarsity":     "Daffodil University",
+        "thefinancialexpress": "Financial Express",
+        "thedailystar":        "The Daily Star",
+        "tbsnews":             "TBS News",
+        "bdnews24":            "BD News 24",
+        "dhakatribune":        "Dhaka Tribune",
     }
-    for k, v in m.items():
+    for k, v in mapping.items():
         if k in u:
             return v
-    return "Web"
+    # Only accept .bd domains
+    if ".bd/" in u or ".bd" == u[-3:]:
+        return "Web"
+    return None  # None = untrusted, skip
+
+def _parse_serper_date(raw):
+    now = datetime.now(timezone.utc)
+    if not raw:
+        return now.isoformat()
+    if m := re.search(r"(\d+)\s+day", raw):
+        return (now - timedelta(days=int(m.group(1)))).isoformat()
+    if re.search(r"\d+\s+hour", raw):
+        return now.isoformat()
+    if m := re.search(r"(\d+)\s+week", raw):
+        return (now - timedelta(weeks=int(m.group(1)))).isoformat()
+    return now.isoformat()
 
 # ════════════════════════════════════════════════════════════════════════════
-# SOURCE 1 — Serper: search BDJobs directly (bypasses 403)
+# SOURCE 1 — Serper: BDJobs + trusted BD news (bypasses 403)
 # ════════════════════════════════════════════════════════════════════════════
 SERPER_QUERIES = [
-    # BDJobs site-specific — finds actual job listing pages
-    'site:bdjobs.com "lecturer" "computer science" OR "CSE" OR "information technology" 2026',
+    'site:bdjobs.com "lecturer" "computer science" OR "cse" 2026',
+    'site:bdjobs.com "lecturer" "information technology" OR "software engineering" 2026',
+    'site:bdjobs.com "senior lecturer" university Bangladesh 2026',
+    'site:bdjobs.com "BRAC" lecturer "computer science" OR "cse" 2026',
+    'site:bdjobs.com "lecturer" "school of data" OR "computational" 2026',
     'site:bdjobs.com "lecturer" university Bangladesh 2026',
-    'site:bdjobs.com/details "lecturer" CSE',
-    # BRAC specific — their title is "Multiple Open Ranked Faculty"
-    'site:bdjobs.com "BRAC" "computer science" OR "CSE" lecturer 2026',
-    'site:bdjobs.com "BRAC University" lecturer',
-    # General BD university lecturer CSE
-    '"lecturer" "computer science" OR "CSE" Bangladesh university circular 2026',
-    '"lecturer" "information technology" Bangladesh university circular 2026',
-    # Top private unis specifically
-    '"North South" OR "AIUB" OR "IUB" OR "East West" lecturer CSE 2026',
-    '"Daffodil" OR "ULAB" OR "UIU" OR "AUST" lecturer "computer science" 2026',
-    '"Stamford University" OR "Southeast University" lecturer CSE circular',
+    '"lecturer" "computer science" OR "CSE" Bangladesh university circular 2026 site:thefinancialexpress.com.bd OR site:thedailystar.net OR site:tbsnews.net',
+    '"lecturer" "information technology" Bangladesh university 2026 -site:instagram.com -site:facebook.com -site:linkedin.com',
 ]
 
 def scrape_serper():
     if not SERPER_KEY:
-        print("  ⚠️  No SERPER_API_KEY — get free key at serper.dev")
+        print("  ⚠️  SERPER_API_KEY missing — get free key at serper.dev")
         return []
 
     jobs, seen = [], set()
-    print("  [Serper Search — BDJobs + Web]")
+    print("  [Serper]")
 
     for query in SERPER_QUERIES:
         try:
@@ -210,26 +334,30 @@ def scrape_serper():
                 timeout=15,
             )
             if r.status_code != 200:
-                print(f"    Serper {r.status_code}: {query[:50]}")
+                print(f"    {r.status_code}: {query[:45]}")
                 continue
 
-            results = r.json().get("organic", [])
-            print(f"    {len(results)} results ← {query[:55]}")
-
-            for res in results:
-                title   = res.get("title", "").strip()
-                url     = res.get("link", "").strip()
-                snippet = res.get("snippet", "").strip()
-                date_raw = res.get("date", "")
+            accepted = 0
+            for res in r.json().get("organic", []):
+                title    = res.get("title",   "").strip()
+                url      = res.get("link",    "").strip()
+                snippet  = res.get("snippet", "").strip()
+                date_raw = res.get("date",    "")
 
                 if not title or not url or url in seen:
                     continue
 
-                # Clean " - BDJobs" or " | Source" suffix
-                clean = re.sub(r"\s*[-|–]\s*(BDJobs|BD Jobs|bdjobs\.com)[^|]*$", "", title, flags=re.I).strip()
-                clean = re.sub(r"\s*[-|–]\s*[^-|]{3,35}$", "", clean).strip()
+                # Clean title suffixes
+                clean = re.sub(r"\s*[-|–]\s*(BDJobs|BD Jobs|bdjobs\.com).*$", "", title, flags=re.I).strip()
+                clean = re.sub(r"\s*:\s*(BDJobs|BD Jobs).*$", "", clean, flags=re.I).strip()
 
-                if not is_valid(clean, snippet):
+                # Determine trusted source
+                source = _source_name(url)
+                if source is None:
+                    continue
+
+                is_bdj = "bdjobs.com" in url.lower()
+                if not is_valid_job(clean, snippet, url, is_bdjobs=is_bdj):
                     continue
 
                 found_at = _parse_serper_date(date_raw)
@@ -237,9 +365,7 @@ def scrape_serper():
                     continue
 
                 seen.add(url)
-                source = _source_name(url)
-                dl = extract_deadline(snippet)
-
+                accepted += 1
                 print(f"    ✅ {clean[:60]}")
                 jobs.append({
                     "id":          make_id(clean, url),
@@ -247,95 +373,25 @@ def scrape_serper():
                     "institution": source,
                     "source":      source,
                     "url":         url,
-                    "deadline":    dl,
+                    "deadline":    extract_deadline(f"{clean} {snippet}"),
                     "found_at":    found_at,
                     "notified":    False,
                 })
+
+            print(f"    {accepted} accepted ← {query[:50]}")
+
         except Exception as e:
             print(f"    ERR: {e}")
         time.sleep(0.4)
 
-    print(f"  → {len(jobs)} jobs from Serper")
-    return jobs
-
-def _parse_serper_date(date_raw):
-    now = datetime.now(timezone.utc)
-    if not date_raw:
-        return now.isoformat()
-    m = re.search(r"(\d+)\s+day", date_raw)
-    if m:
-        return (now - timedelta(days=int(m.group(1)))).isoformat()
-    m = re.search(r"(\d+)\s+hour", date_raw)
-    if m:
-        return now.isoformat()
-    m = re.search(r"(\d+)\s+week", date_raw)
-    if m:
-        return (now - timedelta(weeks=int(m.group(1)))).isoformat()
-    return now.isoformat()
-
-# ════════════════════════════════════════════════════════════════════════════
-# SOURCE 2 — Serper News
-# ════════════════════════════════════════════════════════════════════════════
-NEWS_QUERIES = [
-    "CSE lecturer job circular Bangladesh university 2026",
-    "computer science lecturer Bangladesh university 2026",
-    "information technology lecturer vacancy Bangladesh 2026",
-    "BRAC UIU NSU AIUB lecturer CSE circular 2026",
-]
-
-def scrape_serper_news():
-    if not SERPER_KEY:
-        return []
-
-    jobs, seen = [], set()
-    print("  [Serper News]")
-
-    for query in NEWS_QUERIES:
-        try:
-            r = requests.post(
-                "https://google.serper.dev/news",
-                headers={"X-API-KEY": SERPER_KEY, "Content-Type": "application/json"},
-                json={"q": query, "gl": "bd", "hl": "en", "num": 10},
-                timeout=15,
-            )
-            if r.status_code != 200:
-                continue
-
-            for res in r.json().get("news", []):
-                title   = res.get("title", "").strip()
-                url     = res.get("link", "").strip()
-                snippet = res.get("snippet", "").strip()
-                if not title or not url or url in seen:
-                    continue
-                clean = re.sub(r"\s*[-|–]\s*[^-|]{3,35}$", "", title).strip()
-                if not is_valid(clean, snippet):
-                    continue
-                seen.add(url)
-                print(f"    ✅ {clean[:60]}")
-                jobs.append({
-                    "id":          make_id(clean, url),
-                    "title":       clean,
-                    "institution": _source_name(url),
-                    "source":      _source_name(url),
-                    "url":         url,
-                    "deadline":    extract_deadline(snippet),
-                    "found_at":    datetime.now(timezone.utc).isoformat(),
-                    "notified":    False,
-                })
-        except Exception as e:
-            print(f"    ERR: {e}")
-        time.sleep(0.4)
-
-    print(f"  → {len(jobs)} from news")
+    print(f"  → {len(jobs)} from Serper")
     return jobs
 
 # ════════════════════════════════════════════════════════════════════════════
-# SOURCE 3 — University career pages
-# KEY FIX: for pages that only show "Lecturer" without dept, we fetch the
-# detail link and check its text for CSE keywords
+# SOURCE 2 — University career pages
 # ════════════════════════════════════════════════════════════════════════════
 UNIVERSITIES = [
-    {"name": "Ahsanullah Univ (AUST)",         "url": "https://www.aust.edu/career"},
+    {"name": "AUST",                           "url": "https://www.aust.edu/career"},
     {"name": "North South University",         "url": "https://www.northsouth.edu/administration/offices/human-resources/job-opportunities.html"},
     {"name": "BRAC University",                "url": "https://www.bracu.ac.bd/about/offices/human-resources/job-opportunities"},
     {"name": "IUB",                            "url": "https://iub.edu.bd/career"},
@@ -350,6 +406,9 @@ UNIVERSITIES = [
     {"name": "Bangladesh University",          "url": "https://www.bu.edu.bd/job/"},
     {"name": "BUBT",                           "url": "https://www.bubt.edu.bd/home/career"},
     {"name": "Northern University Bangladesh", "url": "https://nub.ac.bd/career/"},
+    {"name": "City University",                "url": "https://cityuniversity.edu.bd/career/"},
+    {"name": "Eastern University",             "url": "https://www.easternuni.edu.bd/career/"},
+    {"name": "Prime University",               "url": "https://www.primeuniversity.edu.bd/career/"},
     {"name": "Dhaka University",               "url": "https://www.du.ac.bd/body/notice_list/NTC"},
     {"name": "CUET",                           "url": "https://www.cuet.ac.bd/notice"},
     {"name": "RUET",                           "url": "https://www.ruet.ac.bd/all-notice-circular"},
@@ -357,16 +416,10 @@ UNIVERSITIES = [
     {"name": "DUET",                           "url": "https://duet.ac.bd/notices/"},
     {"name": "SUST",                           "url": "https://www.sust.edu/4"},
     {"name": "JU",                             "url": "https://www.juniv.edu/notice"},
-    {"name": "City University",                "url": "https://cityuniversity.edu.bd/career/"},
-    {"name": "Prime University",               "url": "https://www.primeuniversity.edu.bd/career/"},
-    {"name": "Eastern University",             "url": "https://www.easternuni.edu.bd/career/"},
-    {"name": "World University of Bangladesh", "url": "https://wub.edu.bd/career/"},
     {"name": "NSTU",                           "url": "https://nstu.edu.bd/notice/"},
-    {"name": "Barishal University",            "url": "https://barisaluniv.edu.bd/notice/"},
 ]
 
-def fetch_page_text(url, timeout=10):
-    """Fetch a page and return all visible text — used to verify CSE content"""
+def _get_text(url, timeout=10):
     try:
         r = requests.get(url, headers=HEADERS, timeout=timeout)
         if r.status_code == 200:
@@ -384,7 +437,6 @@ def scrape_universities():
         try:
             r = requests.get(uni["url"], headers=HEADERS, timeout=12)
             if r.status_code != 200:
-                print(f"    ✗ {uni['name']}: HTTP {r.status_code}")
                 continue
             soup = BeautifulSoup(r.content, "lxml")
             found = 0
@@ -393,36 +445,39 @@ def scrape_universities():
                 title = a.get_text(" ", strip=True)
                 href  = a.get("href", "").strip()
 
-                if not href or href in ("#", "javascript:void(0)"):
+                if not href or href.startswith("#") or "javascript" in href:
                     continue
                 if len(title) < 5 or len(title) > 200:
                     continue
 
+                # Must have lecturer word in link text
+                if not has_lecturer(title):
+                    continue
+                # Must NOT have professor
+                if has_professor(title):
+                    continue
+                # Must not be bad dept in title
+                if is_bad_dept(title):
+                    continue
+
                 full_url = urljoin(base, href) if not href.startswith("http") else href
 
-                # Must have lecturer word somewhere in title
-                if not is_lecturer(title):
-                    continue
+                # If title already confirms CSE → accept directly
+                if has_cse(title) and not deadline_is_past(title):
+                    pass
 
-                # If title already has CSE → accept immediately
-                if is_cse(title) and not is_rejected(title):
-                    pass  # good
-
-                # Else title is just "Lecturer" — fetch detail page to check dept
-                elif not is_rejected(title):
-                    detail_text = fetch_page_text(full_url)
-                    if not detail_text or not is_cse(detail_text):
-                        continue
-                    # Use detail text for deadline too
-                    title_from_detail = _extract_title_from_detail(detail_text, title)
-                    if title_from_detail:
-                        title = title_from_detail
+                # Generic "Lecturer" with no dept → fetch detail page
                 else:
-                    continue
+                    detail = _get_text(full_url)
+                    if not detail:
+                        continue
+                    if not has_cse(detail):
+                        continue
+                    if deadline_is_past(detail):
+                        continue
 
-                jid = make_id(title, uni["name"])
                 jobs.append({
-                    "id":          jid,
+                    "id":          make_id(title, uni["name"]),
                     "title":       title,
                     "institution": uni["name"],
                     "source":      uni["name"],
@@ -432,7 +487,7 @@ def scrape_universities():
                     "notified":    False,
                 })
                 found += 1
-                time.sleep(0.2)  # small delay between detail fetches
+                time.sleep(0.25)
 
             if found:
                 print(f"    ✅ {uni['name']}: {found}")
@@ -443,18 +498,6 @@ def scrape_universities():
 
     print(f"  → {len(jobs)} from university pages")
     return jobs
-
-def _extract_title_from_detail(text, fallback):
-    """Try to get a better title from detail page"""
-    # Look for "Lecturer in/of/- CSE" pattern
-    m = re.search(
-        r"((?:senior\s+)?lecturer\s*(?:in|of|[-–,]|for)?\s*"
-        r"(?:computer\s+science|cse|information\s+technology|software\s+engineering|it\b))",
-        text, re.I
-    )
-    if m:
-        return m.group(1).strip().title()
-    return fallback
 
 # ════════════════════════════════════════════════════════════════════════════
 # Telegram
@@ -478,30 +521,41 @@ def send_telegram(text):
 # MAIN
 # ════════════════════════════════════════════════════════════════════════════
 def main():
-    print("\n🔍 BD CSE Lecturer Tracker v8")
-    print("=" * 52)
+    print(f"\n🔍 BD CSE/IT Lecturer Tracker v9")
+    print(f"   {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
+    print("=" * 55)
 
     all_found = []
 
-    print("\n📡 SOURCE 1: Serper Search (BDJobs + Web)")
+    print("\n📡 SOURCE 1: Serper (BDJobs + trusted BD sites)")
     all_found += scrape_serper()
 
-    print("\n📡 SOURCE 2: Serper News")
-    all_found += scrape_serper_news()
-
-    print("\n📡 SOURCE 3: University Career Pages")
+    print("\n📡 SOURCE 2: University Career Pages")
     all_found += scrape_universities()
 
-    print(f"\n📋 Total valid: {len(all_found)}")
+    print(f"\n📋 Valid jobs this run: {len(all_found)}")
 
-    existing   = load_existing()
-    existing["jobs"] = [j for j in existing["jobs"] if is_recent(j.get("found_at", ""))]
+    # Load existing, remove expired/past-deadline jobs
+    existing = load_existing()
+
+    def keep(j):
+        if not is_recent(j.get("found_at", "")):
+            return False
+        dl = j.get("deadline", "")
+        if dl and deadline_is_past(dl):
+            return False
+        return True
+
+    existing["jobs"] = [j for j in existing["jobs"] if keep(j)]
+
     exist_ids  = {j["id"]  for j in existing["jobs"]}
     exist_urls = {j["url"] for j in existing["jobs"]}
 
     added, seen_new = [], set()
     for job in all_found:
-        if job["id"] not in exist_ids and job["url"] not in exist_urls and job["id"] not in seen_new:
+        if (job["id"]  not in exist_ids  and
+            job["url"] not in exist_urls and
+            job["id"]  not in seen_new):
             existing["jobs"].insert(0, job)
             added.append(job)
             exist_ids.add(job["id"])
@@ -515,7 +569,7 @@ def main():
     with open("new_jobs.json", "w", encoding="utf-8") as f:
         json.dump(added, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ New: {len(added)} | Stored: {len(existing['jobs'])}")
+    print(f"✅ New: {len(added)} | Active stored: {len(existing['jobs'])}")
 
     for job in added:
         dl  = f"\n⏰ <b>Deadline:</b> {job['deadline']}" if job.get("deadline") else ""
@@ -529,7 +583,9 @@ def main():
         time.sleep(0.8)
 
     if len(added) >= 3:
-        send_telegram(f"📊 <b>{len(added)} new CSE/IT Lecturer jobs found!</b> Check your dashboard 🎉")
+        send_telegram(
+            f"📊 <b>{len(added)} new CSE/IT Lecturer jobs found!</b> Check dashboard 🎉"
+        )
 
 if __name__ == "__main__":
     main()
