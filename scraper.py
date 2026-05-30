@@ -118,6 +118,9 @@ REJECT_SOURCE = [
     "chakri.com.bd",
     "jobcircularbd",
     "bdcircular",
+    "hecpakistan",
+    "hotjobs.bdjobs.com",   # hotjobs = just uni name pages, no job info
+    "hotjobs1.bdjobs.com",
 ]
 
 # ── Vague title patterns ──────────────────────────────────────────────────────
@@ -129,6 +132,8 @@ VAGUE_TITLE = [
     r"^we are hiring$",
     r"^now hiring$",
     r"^eee[-\s]?lec",
+    r"^apply for the position",    # generic apply link
+    r"^apply now",
     r"^\w{1,5}$",
 ]
 
@@ -320,6 +325,16 @@ def _parse_serper_date(raw):
 # ════════════════════════════════════════════════════════════════════════════
 # SOURCE 1 — Serper: BDJobs + trusted BD news (bypasses 403)
 # ════════════════════════════════════════════════════════════════════════════
+def _fetch_bdjobs_detail(url, timeout=10):
+    """Fetch BDJobs job detail page and return text body for CSE verification."""
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=timeout)
+        if r.status_code == 200:
+            return BeautifulSoup(r.content, "lxml").get_text(" ", strip=True)
+    except:
+        pass
+    return ""
+
 SERPER_QUERIES = [
     'site:bdjobs.com "lecturer" "computer science" OR "cse" 2026',
     'site:bdjobs.com "lecturer" "information technology" OR "software engineering" 2026',
@@ -374,7 +389,15 @@ def scrape_serper():
                 if "hotjobs" in url.lower() and not has_lecturer(clean):
                     continue
                 is_bdj = "bdjobs.com" in url.lower()
-                if not is_valid_job(clean, snippet, url, is_bdjobs=is_bdj):
+
+                # For real BDJobs detail pages: if title has "lecturer" but
+                # snippet has no CSE info, fetch the detail page to verify dept
+                extra_body = snippet
+                if (is_bdj and "hotjobs" not in url.lower()
+                        and has_lecturer(clean) and not has_cse(f"{clean} {snippet}")):
+                    extra_body = _fetch_bdjobs_detail(url)
+
+                if not is_valid_job(clean, extra_body, url, is_bdjobs=is_bdj):
                     continue
 
                 found_at = _parse_serper_date(date_raw)
@@ -390,7 +413,7 @@ def scrape_serper():
                     "institution": source,
                     "source":      source,
                     "url":         url,
-                    "deadline":    extract_deadline(f"{clean} {snippet}"),
+                    "deadline":    extract_deadline(f"{clean} {extra_body}"),
                     "found_at":    found_at,
                     "notified":    False,
                 })
@@ -558,8 +581,13 @@ def main():
     def keep(j):
         if not is_recent(j.get("found_at", "")):
             return False
+        # Check deadline field
         dl = j.get("deadline", "")
         if dl and deadline_is_past(dl):
+            return False
+        # Also check title for embedded past dates
+        title = j.get("title", "")
+        if deadline_is_past(title):
             return False
         return True
 
