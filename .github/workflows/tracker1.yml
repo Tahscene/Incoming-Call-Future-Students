@@ -12,7 +12,6 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
       - uses: actions/checkout@v4
 
@@ -21,24 +20,22 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 lxml
+        run: pip install requests
 
-      - name: Run scraper
+      - name: Search jobs + Send Telegram
+        env:
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scraper.py
 
-      - name: Notify Telegram
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python notifier.py
-
-      - name: Build dashboard HTML
+      - name: Build dashboard
         run: python build_dashboard.py
 
       - name: Commit & push
         run: |
           git config user.name "tracker-bot"
           git config user.email "bot@noreply.github.com"
-          git add docs/jobs.json new_jobs.json 2>/dev/null || true
+          git add docs/ new_jobs.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "update $(date -u +'%Y-%m-%d %H:%M')"
           git push || true
