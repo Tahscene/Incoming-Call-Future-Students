@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "ad01653b418c",
+      "title": "Lecturer EEE",
+      "institution": "UIU",
+      "source": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-eee-262/",
+      "deadline": "",
+      "found_at": "2026-05-30T07:09:51.544860+00:00",
+      "notified": false
+    },
+    {
       "id": "b1c4d497009c",
       "title": "Assistant Professor CSE",
       "institution": "UIU",
@@ -21,5 +31,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-05-30T06:50:28.682664+00:00"
+  "last_updated": "2026-05-30T07:10:15.865363+00:00"
 }
