@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "618a77ff9822",
+      "title": "Senior Lecturer of Automobile Engineering : World University ... - Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/jobdetails.asp?id=1489630&fcatId=4&ln=1&JobKeyword=hamdard%20university%20bangladesh",
+      "deadline": "",
+      "found_at": "2026-05-31T13:47:31.285007+00:00",
+      "notified": false
+    },
+    {
       "id": "9030eb80996e",
       "title": "university computer science Jobs in Bangladesh | Careerjet",
       "institution": "Web",
@@ -331,5 +341,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-05-31T10:18:18.811734+00:00"
+  "last_updated": "2026-05-31T13:48:27.621115+00:00"
 }
