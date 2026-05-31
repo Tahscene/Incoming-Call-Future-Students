@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "b1c9c1eeef2f",
+      "title": "Nakib Aman Lecturer - Pabna University of Science and Technology",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://pust.ac.bd/academic/departments/dept_teachers/dept_teachers_profile/100228",
+      "deadline": "",
+      "found_at": "2026-05-31T21:01:22.374363+00:00",
+      "notified": false
+    },
+    {
       "id": "e19150b121d7",
       "title": "Bangladesh must rebuild its public universities now",
       "institution": "Financial Express",
@@ -351,5 +361,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-05-31T19:20:02.344551+00:00"
+  "last_updated": "2026-05-31T21:02:00.182355+00:00"
 }
