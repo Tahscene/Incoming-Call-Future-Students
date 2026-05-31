@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "175b8608bfe7",
+      "title": "BRAC University - Lecturer - Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/jobdetails/?id=1491602&type=new",
+      "deadline": "12 Jun 2026",
+      "found_at": "2026-05-25T23:01:33.045548+00:00",
+      "notified": false
+    },
+    {
       "id": "b1c9c1eeef2f",
       "title": "Nakib Aman Lecturer - Pabna University of Science and Technology",
       "institution": "Web",
@@ -361,5 +371,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-05-31T21:02:00.182355+00:00"
+  "last_updated": "2026-05-31T23:02:36.007011+00:00"
 }
