@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "cdcf7b2e9b53",
+      "title": "BRAC University - Senior Lecturer",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/jobs/details/1491599?ln=1",
+      "deadline": "12 Jun 2026",
+      "found_at": "2026-05-25T17:42:52.445906+00:00",
+      "notified": false
+    },
+    {
       "id": "175b8608bfe7",
       "title": "BRAC University - Lecturer - Jobs",
       "institution": "BDJobs",
@@ -371,5 +381,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-01T11:38:52.292859+00:00"
+  "last_updated": "2026-06-01T17:43:43.850941+00:00"
 }
