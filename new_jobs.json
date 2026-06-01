@@ -1,12 +1,42 @@
 [
   {
-    "id": "cdcf7b2e9b53",
-    "title": "BRAC University - Senior Lecturer",
-    "institution": "BDJobs",
-    "source": "BDJobs",
-    "url": "https://bdjobs.com/jobs/details/1491599?ln=1",
-    "deadline": "12 Jun 2026",
-    "found_at": "2026-05-25T17:42:52.445906+00:00",
+    "id": "f20fa53d93c3",
+    "title": "Team Atlas from Bangladesh reaches finals of Australian Rover ...",
+    "institution": "The Daily Star",
+    "source": "The Daily Star",
+    "url": "https://www.thedailystar.net/tech-startup/news/team-atlas-bangladesh-reaches-finals-australian-rover-challenge-2024-3582541",
+    "deadline": "",
+    "found_at": "2026-06-01T21:34:56.276410+00:00",
+    "notified": false
+  },
+  {
+    "id": "1b0a3ecdb96c",
+    "title": "Computer science education and research | The Daily Star",
+    "institution": "The Daily Star",
+    "source": "The Daily Star",
+    "url": "https://www.thedailystar.net/supplements/24th-anniversary-the-daily-star-part-1/computer-science-education-and-research-72926",
+    "deadline": "",
+    "found_at": "2026-06-01T21:34:56.276708+00:00",
+    "notified": false
+  },
+  {
+    "id": "7ee62e3a2a62",
+    "title": "IUB CSE major Tanvir and team become 1st runners-up in NASA ...",
+    "institution": "Financial Express",
+    "source": "Financial Express",
+    "url": "https://thefinancialexpress.com.bd/education/iub-cse-major-tanvir-and-team-become-1st-runners-up-in-nasa-space-apps-challenge",
+    "deadline": "",
+    "found_at": "2026-06-01T21:34:56.276831+00:00",
+    "notified": false
+  },
+  {
+    "id": "bb51580361b5",
+    "title": "UIU places 1st among Asian teams in University Rover Challenge ...",
+    "institution": "The Daily Star",
+    "source": "The Daily Star",
+    "url": "https://www.thedailystar.net/tech-startup/news/uiu-places-1st-among-asian-teams-university-rover-challenge-2023-3340006",
+    "deadline": "",
+    "found_at": "2026-06-01T21:34:56.277126+00:00",
     "notified": false
   }
 ]
