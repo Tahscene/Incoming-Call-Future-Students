@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "6c2952a18f9e",
+      "title": "284 Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/JobSearch.asp?LocationId=10&locationName=Chattogram",
+      "deadline": "",
+      "found_at": "2026-06-07T15:25:17.792752+00:00",
+      "notified": false
+    },
+    {
       "id": "1b2150b177a2",
       "title": "AI Policy for Bangladesh",
       "institution": "Web",
@@ -531,5 +541,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-07T13:56:32.042352+00:00"
+  "last_updated": "2026-06-07T15:26:04.401478+00:00"
 }
