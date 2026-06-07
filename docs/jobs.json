@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "cdf8d215fa09",
+      "title": "Satyaki Das | University of Liberal Arts Bangladesh",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://ulab.edu.bd/faculty/satyaki-das",
+      "deadline": "",
+      "found_at": "2026-06-07T21:15:13.676943+00:00",
+      "notified": false
+    },
+    {
       "id": "6c2952a18f9e",
       "title": "284 Jobs",
       "institution": "BDJobs",
@@ -541,5 +551,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-07T19:25:58.614246+00:00"
+  "last_updated": "2026-06-07T21:16:04.928352+00:00"
 }
