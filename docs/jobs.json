@@ -341,16 +341,6 @@
       "notified": false
     },
     {
-      "id": "ec225066535f",
-      "title": "Lecturer (Department of CSE) : Bangladesh University - Jobs",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/jobdetails/?id=1487938&fcatId=4&ln=1",
-      "deadline": "08 Jun 2026",
-      "found_at": "2026-05-30T17:07:20.619907+00:00",
-      "notified": false
-    },
-    {
       "id": "871122a66da7",
       "title": "Lecturer : Scholars` School & College - Jobs",
       "institution": "BDJobs",
@@ -551,16 +541,6 @@
       "notified": false
     },
     {
-      "id": "b6c52c59e78a",
-      "title": "Lecturer (Department of CSE) : Bangladesh University",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1487938?ln=1",
-      "deadline": "08 Jun 2026",
-      "found_at": "2026-05-30T14:18:58.509035+00:00",
-      "notified": false
-    },
-    {
       "id": "e4f3b29be822",
       "title": "Senior Lecturer / Lecturer : Stamford University Bangladesh - Jobs",
       "institution": "BDJobs",
@@ -581,5 +561,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-08T23:13:21.934954+00:00"
+  "last_updated": "2026-06-09T03:39:46.806387+00:00"
 }
