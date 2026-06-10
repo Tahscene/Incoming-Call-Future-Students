@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "cd487cebda53",
+      "title": "340 Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/jobsearch.asp?fcatId=4&icatId=",
+      "deadline": "18 Jun 2026",
+      "found_at": "2026-06-10T23:26:28.015882+00:00",
+      "notified": false
+    },
+    {
       "id": "03ffabb71b95",
       "title": "Jobs - Mustain Billah | Jashore University of Scince & Technology",
       "institution": "Web",
@@ -611,5 +621,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-10T20:33:16.659759+00:00"
+  "last_updated": "2026-06-10T23:27:17.412502+00:00"
 }
