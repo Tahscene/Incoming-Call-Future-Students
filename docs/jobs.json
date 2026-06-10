@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "8b273431f9ff",
+      "title": "346 Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/jobs/?fcatId=&icatId=19",
+      "deadline": "18 Jun 2026",
+      "found_at": "2026-06-10T03:53:03.251279+00:00",
+      "notified": false
+    },
+    {
       "id": "82320126214e",
       "title": "137 Jobs",
       "institution": "BDJobs",
@@ -591,5 +601,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-09T23:18:30.752931+00:00"
+  "last_updated": "2026-06-10T03:54:19.741070+00:00"
 }
