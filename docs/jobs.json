@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "8a972fe59c9c",
+      "title": "UIU rover team ranks third globally, first in Asia at URC 2026",
+      "institution": "TBS News",
+      "source": "TBS News",
+      "url": "https://www.tbsnews.net/economy/corporates/uiu-rover-team-ranks-third-globally-first-asia-urc-2026-1453886",
+      "deadline": "",
+      "found_at": "2026-06-11T16:05:02.707525+00:00",
+      "notified": false
+    },
+    {
       "id": "cd487cebda53",
       "title": "340 Jobs",
       "institution": "BDJobs",
@@ -621,5 +631,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-11T10:28:58.812095+00:00"
+  "last_updated": "2026-06-11T16:05:39.972824+00:00"
 }
