@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "f583d8dd88f0",
+      "title": "Bangladesh Army University of Science & Technology (BAUST ...",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/details/1496271?ln=1",
+      "deadline": "24 Jun 2026",
+      "found_at": "2026-06-11T20:24:19.341421+00:00",
+      "notified": false
+    },
+    {
       "id": "8a972fe59c9c",
       "title": "UIU rover team ranks third globally, first in Asia at URC 2026",
       "institution": "TBS News",
@@ -631,5 +641,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-11T16:05:39.972824+00:00"
+  "last_updated": "2026-06-11T20:25:22.088402+00:00"
 }
