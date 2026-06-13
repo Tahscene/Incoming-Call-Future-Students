@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "8ab5d31f246b",
+      "title": "Lecturer : BRAC University - Dhaka",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/details/1491602?ln=1",
+      "deadline": "",
+      "found_at": "2026-06-13T03:55:03.049802+00:00",
+      "notified": false
+    },
+    {
       "id": "c0c5feb7ebe3",
       "title": "BRAC University - Senior Lecturer",
       "institution": "BDJobs",
@@ -171,26 +181,6 @@
       "notified": false
     },
     {
-      "id": "a9edff010fa5",
-      "title": "Z. H. Sikder University of Science and Technology, Shariatpur. - Jobs",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/jobdetails/?id=1494043&fcatId=4&ln=1",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-06-07T04:04:40.755084+00:00",
-      "notified": false
-    },
-    {
-      "id": "645234fb4081",
-      "title": "Z. H. Sikder University of Science and Technology, Shariatpur ...",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1494043?ln=1",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-06-06T19:25:24.149432+00:00",
-      "notified": false
-    },
-    {
       "id": "08b9f3c24c11",
       "title": "Company Registration Process: Legal Formalities",
       "institution": "BDJobs",
@@ -298,26 +288,6 @@
       "url": "https://www.thedailystar.net/tech-startup/news/team-atlas-bangladesh-reaches-finals-australian-rover-challenge-2024-3582541",
       "deadline": "",
       "found_at": "2026-06-01T21:34:56.276410+00:00",
-      "notified": false
-    },
-    {
-      "id": "cdcf7b2e9b53",
-      "title": "BRAC University - Senior Lecturer",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/jobs/details/1491599?ln=1",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-05-25T17:42:52.445906+00:00",
-      "notified": false
-    },
-    {
-      "id": "175b8608bfe7",
-      "title": "BRAC University - Lecturer - Jobs",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/jobdetails/?id=1491602&type=new",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-05-25T23:01:33.045548+00:00",
       "notified": false
     },
     {
@@ -431,16 +401,6 @@
       "notified": false
     },
     {
-      "id": "75050e57e0bc",
-      "title": "BRAC University - Senior Lecturer",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1491599?ln=1",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-05-25T17:07:21.821433+00:00",
-      "notified": false
-    },
-    {
       "id": "871122a66da7",
       "title": "Lecturer : Scholars` School & College - Jobs",
       "institution": "BDJobs",
@@ -458,16 +418,6 @@
       "url": "https://jobs.bdjobs.com/jobdetails.asp?id=1491599&type=new",
       "deadline": "",
       "found_at": "2026-05-25T15:08:43.614975+00:00",
-      "notified": false
-    },
-    {
-      "id": "cc69bbfaebea",
-      "title": "Lecturer, Dept of Computer Science and Engineering (CSE), FSSH",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/jobdetails/?id=1487738&type=new",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-05-30T15:08:39.992028+00:00",
       "notified": false
     },
     {
@@ -621,16 +571,6 @@
       "notified": false
     },
     {
-      "id": "8ab5d31f246b",
-      "title": "Lecturer : BRAC University - Dhaka",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1491602?ln=1",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-05-25T14:18:59.532830+00:00",
-      "notified": false
-    },
-    {
       "id": "64827dd63975",
       "title": "Central University of Science & Technology (CUST) - Jobs",
       "institution": "BDJobs",
@@ -649,17 +589,7 @@
       "deadline": "",
       "found_at": "2026-05-30T14:18:58.508742+00:00",
       "notified": false
-    },
-    {
-      "id": "b84f0251fb5e",
-      "title": "Lecturer, Dept of Computer Science and Engineering (CSE), FSSH",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1487738?ln=1",
-      "deadline": "12 Jun 2026",
-      "found_at": "2026-05-30T14:18:58.507867+00:00",
-      "notified": false
     }
   ],
-  "last_updated": "2026-06-12T23:19:23.211421+00:00"
+  "last_updated": "2026-06-13T03:56:08.708281+00:00"
 }
