@@ -1,6 +1,26 @@
 {
   "jobs": [
     {
+      "id": "ef9487a9eb8a",
+      "title": "Sr. Lecturer/ Lecturer, Computer Science & Engineering | Stamford ...",
+      "institution": "TBS News",
+      "source": "TBS News",
+      "url": "https://www.tbsnews.net/job/sr-lecturer-lecturer-computer-science-engineering-stamford-university-bangladesh-1375066",
+      "deadline": "",
+      "found_at": "2026-06-16T16:54:41.489577+00:00",
+      "notified": false
+    },
+    {
+      "id": "492ab9a65074",
+      "title": "Bdjobs.com: Largest Job Site in Bangladesh, Search Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://www.bdjobs.com/",
+      "deadline": "",
+      "found_at": "2026-06-16T16:54:30.389576+00:00",
+      "notified": false
+    },
+    {
       "id": "b11341ded5e6",
       "title": "Lecturer : University of Information Technology & Sciences (UITS)",
       "institution": "BDJobs",
@@ -621,5 +641,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-16T11:14:10.692851+00:00"
+  "last_updated": "2026-06-16T16:55:15.849156+00:00"
 }
