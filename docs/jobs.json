@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "625082085579",
+      "title": "Senior Lecturer : BRAC University - Dhaka",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/details/1491599?ln=1",
+      "deadline": "",
+      "found_at": "2026-06-17T10:58:56.552038+00:00",
+      "notified": false
+    },
+    {
       "id": "ef9487a9eb8a",
       "title": "Sr. Lecturer/ Lecturer, Computer Science & Engineering | Stamford ...",
       "institution": "TBS News",
@@ -641,5 +651,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-17T04:16:12.709695+00:00"
+  "last_updated": "2026-06-17T10:59:46.649568+00:00"
 }
