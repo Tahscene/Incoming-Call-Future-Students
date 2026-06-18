@@ -1,6 +1,26 @@
 {
   "jobs": [
     {
+      "id": "a3f6b09e6878",
+      "title": "information technology Jobs in Bangladesh | Careerjet",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://www.careerjet.com.bd/information-technology-jobs",
+      "deadline": "",
+      "found_at": "2026-06-18T18:26:59.617244+00:00",
+      "notified": false
+    },
+    {
+      "id": "7ba0b4f31f6d",
+      "title": "Lecturer (CSE) : Eastern University - Dhaka - Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/jobdetails/?id=1480902&type=new",
+      "deadline": "",
+      "found_at": "2026-06-18T18:26:40.097919+00:00",
+      "notified": false
+    },
+    {
       "id": "b096d76bafc5",
       "title": "Lecturer in CSE & CSIT : Shanto-Mariam University of ...",
       "institution": "BDJobs",
@@ -671,5 +691,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-18T15:29:10.490787+00:00"
+  "last_updated": "2026-06-18T18:27:53.582318+00:00"
 }
