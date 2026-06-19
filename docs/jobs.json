@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "b9b0c280011d",
+      "title": "lecturer Jobs in Bangladesh | Careerjet",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://www.careerjet.com.bd/lecturer-jobs",
+      "deadline": "",
+      "found_at": "2026-06-19T10:29:02.250207+00:00",
+      "notified": false
+    },
+    {
       "id": "3f446d09f981",
       "title": "Jobs - Syed Md. Galib, PhD | JUST | Jashore University of Scince ...",
       "institution": "Web",
@@ -691,5 +701,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-19T04:26:41.009970+00:00"
+  "last_updated": "2026-06-19T10:29:45.794630+00:00"
 }
