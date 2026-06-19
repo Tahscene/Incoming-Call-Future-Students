@@ -1,6 +1,26 @@
 {
   "jobs": [
     {
+      "id": "3f446d09f981",
+      "title": "Jobs - Syed Md. Galib, PhD | JUST | Jashore University of Scince ...",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://just.edu.bd/t/smg/jobs",
+      "deadline": "",
+      "found_at": "2026-06-19T04:25:44.979713+00:00",
+      "notified": false
+    },
+    {
+      "id": "5863571ddaea",
+      "title": "Lecturer : Northern University Bangladesh - Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/bn/jobdetailsbn.asp?id=1490289&type=new",
+      "deadline": "",
+      "found_at": "2026-06-19T04:25:32.886440+00:00",
+      "notified": false
+    },
+    {
       "id": "a3f6b09e6878",
       "title": "information technology Jobs in Bangladesh | Careerjet",
       "institution": "Web",
@@ -151,16 +171,6 @@
       "notified": false
     },
     {
-      "id": "cd487cebda53",
-      "title": "340 Jobs",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/jobsearch.asp?fcatId=4&icatId=",
-      "deadline": "18 Jun 2026",
-      "found_at": "2026-06-10T23:26:28.015882+00:00",
-      "notified": false
-    },
-    {
       "id": "03ffabb71b95",
       "title": "Jobs - Mustain Billah | Jashore University of Scince & Technology",
       "institution": "Web",
@@ -168,16 +178,6 @@
       "url": "https://just.edu.bd/t/mb/jobs",
       "deadline": "",
       "found_at": "2026-06-10T17:21:40.125599+00:00",
-      "notified": false
-    },
-    {
-      "id": "8b273431f9ff",
-      "title": "346 Jobs",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/jobs/?fcatId=&icatId=19",
-      "deadline": "18 Jun 2026",
-      "found_at": "2026-06-10T03:53:03.251279+00:00",
       "notified": false
     },
     {
@@ -691,5 +691,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-18T22:11:23.515756+00:00"
+  "last_updated": "2026-06-19T04:26:41.009970+00:00"
 }
