@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "6a0841f56df3",
+      "title": "জবস - Jobs",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/bn/jobsearchbn.asp?fcatId=4&icatId=&requestType=new",
+      "deadline": "",
+      "found_at": "2026-06-19T15:21:11.469396+00:00",
+      "notified": false
+    },
+    {
       "id": "b9b0c280011d",
       "title": "lecturer Jobs in Bangladesh | Careerjet",
       "institution": "Web",
@@ -701,5 +711,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-19T10:29:45.794630+00:00"
+  "last_updated": "2026-06-19T15:22:23.629287+00:00"
 }
