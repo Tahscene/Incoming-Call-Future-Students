@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "7b366e47c557",
+      "title": "Lecturer in CSE & CSIT : Shanto-Mariam University of Creative ...",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/jobs/details/1499380?ln=1",
+      "deadline": "30 Jun 2026",
+      "found_at": "2026-06-18T07:41:56.772370+00:00",
+      "notified": false
+    },
+    {
       "id": "e76c2dc26027",
       "title": "341 Jobs",
       "institution": "BDJobs",
@@ -731,5 +741,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-24T03:42:27.922104+00:00"
+  "last_updated": "2026-06-24T07:42:58.025250+00:00"
 }
