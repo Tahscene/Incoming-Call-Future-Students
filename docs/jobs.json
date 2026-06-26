@@ -1,6 +1,26 @@
 {
   "jobs": [
     {
+      "id": "b680c4f602b7",
+      "title": "Faculty Member :: University of Dhaka",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://www.du.ac.bd/faculty_member",
+      "deadline": "",
+      "found_at": "2026-06-26T10:53:05.761981+00:00",
+      "notified": false
+    },
+    {
+      "id": "d719d5954589",
+      "title": "AHSANIA MISSION UNIVERSITY OF SCIENCE & TECHNOLOGY",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/details/1502153?ln=1",
+      "deadline": "",
+      "found_at": "2026-06-26T10:52:54.963265+00:00",
+      "notified": false
+    },
+    {
       "id": "5ce8c31756da",
       "title": "Computer Science and Engineering- State University of Bangladesh",
       "institution": "Web",
@@ -741,5 +761,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-26T07:55:45.049979+00:00"
+  "last_updated": "2026-06-26T10:53:59.501292+00:00"
 }
