@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "bcf102a1e331",
+      "title": "Lecturer : University of Information Technology & Sciences (UITS)",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/hn/details/1498148?ln=1",
+      "deadline": "30 Jun 2026",
+      "found_at": "2026-06-27T06:53:11.232790+00:00",
+      "notified": false
+    },
+    {
       "id": "b680c4f602b7",
       "title": "Faculty Member :: University of Dhaka",
       "institution": "Web",
@@ -761,5 +771,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-27T03:35:40.249828+00:00"
+  "last_updated": "2026-06-27T06:53:58.290350+00:00"
 }
