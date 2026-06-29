@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "aa0604fec901",
+      "title": "Computer Science and Engineering or Software Engineering: Which ...",
+      "institution": "The Daily Star",
+      "source": "The Daily Star",
+      "url": "https://www.thedailystar.net/campus/news/computer-science-and-engineering-or-software-engineering-which-major-should-you-go-3706831",
+      "deadline": "",
+      "found_at": "2026-06-29T15:49:37.685456+00:00",
+      "notified": false
+    },
+    {
       "id": "fd1ca967536e",
       "title": "ISU hosts freshers' reception of Fall 2022 session",
       "institution": "TBS News",
@@ -841,5 +851,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-29T11:03:13.533834+00:00"
+  "last_updated": "2026-06-29T15:50:15.064875+00:00"
 }
