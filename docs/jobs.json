@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "1f559613d234",
+      "title": "Lecturer : RTM Al-Kabir Technical University (RTM-AKTU), Sylhet",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/details/1503098?ln=1",
+      "deadline": "10 Jul 2026",
+      "found_at": "2026-06-30T03:46:31.300176+00:00",
+      "notified": false
+    },
+    {
       "id": "aa0604fec901",
       "title": "Computer Science and Engineering or Software Engineering: Which ...",
       "institution": "The Daily Star",
@@ -851,5 +861,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-29T23:00:31.801108+00:00"
+  "last_updated": "2026-06-30T03:47:36.550849+00:00"
 }
