@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "ea8e4eb736fa",
+      "title": "1774+ Vacancies",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://bdjobs.com/h/jobs?txtsearch=Lecturer%2FAssistant%20Professor&fcat=-1&qOT=0&iCat=0&Country=0&qPosted=0&qDeadline=0&Newspaper=0&qJobNature=0&qJobLevel=0&qExp=0&qAge=0&hidOrder=%27%27&pg=1&rpp=50&hidJobSearch=JobSearch&MPostings=&ver=&strFlid_fvalue=&strFilterName=&hClickLog=0&earlyAccess=0&fcatId=-1&hPopUpVal=1",
+      "deadline": "",
+      "found_at": "2026-06-30T10:57:40.554409+00:00",
+      "notified": false
+    },
+    {
       "id": "1f559613d234",
       "title": "Lecturer : RTM Al-Kabir Technical University (RTM-AKTU), Sylhet",
       "institution": "BDJobs",
@@ -861,5 +871,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-30T07:55:57.993916+00:00"
+  "last_updated": "2026-06-30T10:58:25.087493+00:00"
 }
