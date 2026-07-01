@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "8708ac7c85a7",
+      "title": "Sovon Chakraborty | University of Liberal Arts Bangladesh",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://ulab.edu.bd/faculty/sovon-chakraborty",
+      "deadline": "",
+      "found_at": "2026-07-01T04:01:54.024004+00:00",
+      "notified": false
+    },
+    {
       "id": "ea8e4eb736fa",
       "title": "1774+ Vacancies",
       "institution": "BDJobs",
@@ -101,16 +111,6 @@
       "notified": false
     },
     {
-      "id": "bcf102a1e331",
-      "title": "Lecturer : University of Information Technology & Sciences (UITS)",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/hn/details/1498148?ln=1",
-      "deadline": "30 Jun 2026",
-      "found_at": "2026-06-27T06:53:11.232790+00:00",
-      "notified": false
-    },
-    {
       "id": "b680c4f602b7",
       "title": "Faculty Member :: University of Dhaka",
       "institution": "Web",
@@ -148,16 +148,6 @@
       "url": "https://jobs.bdjobs.com/jobdetails/?id=1491602&fcatId=4&ln=1",
       "deadline": "",
       "found_at": "2026-06-24T10:51:26.146593+00:00",
-      "notified": false
-    },
-    {
-      "id": "7b366e47c557",
-      "title": "Lecturer in CSE & CSIT : Shanto-Mariam University of Creative ...",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/jobs/details/1499380?ln=1",
-      "deadline": "30 Jun 2026",
-      "found_at": "2026-06-18T07:41:56.772370+00:00",
       "notified": false
     },
     {
@@ -241,26 +231,6 @@
       "notified": false
     },
     {
-      "id": "b096d76bafc5",
-      "title": "Lecturer in CSE & CSIT : Shanto-Mariam University of ...",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1499380?ln=1",
-      "deadline": "30 Jun 2026",
-      "found_at": "2026-06-18T15:28:17.238363+00:00",
-      "notified": false
-    },
-    {
-      "id": "7478134b305a",
-      "title": "Lecturer : University of Information Technology & Sciences (UITS)",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/JobDetails.asp?id=1498148&ln=1",
-      "deadline": "30 Jun 2026",
-      "found_at": "2026-06-15T15:34:56.295141+00:00",
-      "notified": false
-    },
-    {
       "id": "625082085579",
       "title": "Senior Lecturer : BRAC University - Dhaka",
       "institution": "BDJobs",
@@ -288,16 +258,6 @@
       "url": "https://www.bdjobs.com/",
       "deadline": "",
       "found_at": "2026-06-16T16:54:30.389576+00:00",
-      "notified": false
-    },
-    {
-      "id": "b11341ded5e6",
-      "title": "Lecturer : University of Information Technology & Sciences (UITS)",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://bdjobs.com/h/details/1498148?ln=1",
-      "deadline": "30 Jun 2026",
-      "found_at": "2026-06-15T18:27:34.180532+00:00",
       "notified": false
     },
     {
@@ -871,5 +831,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-06-30T23:15:36.336806+00:00"
+  "last_updated": "2026-07-01T04:02:51.323909+00:00"
 }
