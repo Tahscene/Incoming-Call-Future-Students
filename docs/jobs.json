@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "7e7c1e33650e",
+      "title": "চাকরির খবর",
+      "institution": "BDJobs",
+      "source": "BDJobs",
+      "url": "https://jobs.bdjobs.com/bn/",
+      "deadline": "",
+      "found_at": "2026-07-04T22:58:16.743483+00:00",
+      "notified": false
+    },
+    {
       "id": "c90941b690f5",
       "title": "Teaching in the age of AI: How can the education curriculum keep up?",
       "institution": "The Daily Star",
@@ -841,5 +851,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-07-04T20:59:40.215736+00:00"
+  "last_updated": "2026-07-04T22:58:55.646090+00:00"
 }
