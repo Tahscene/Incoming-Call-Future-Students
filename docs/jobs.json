@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "a69e636d29c1",
+      "title": "Akif Mahdi Lecturer - Pabna University of Science and Technology",
+      "institution": "Web",
+      "source": "Web",
+      "url": "https://pust.ac.bd/academic/departments/dept_teachers/dept_teachers_profile/100221",
+      "deadline": "",
+      "found_at": "2026-07-08T14:11:19.582934+00:00",
+      "notified": false
+    },
+    {
       "id": "4eeb2d1535ac",
       "title": "Pursuing a degree in business and technology management",
       "institution": "The Daily Star",
@@ -881,5 +891,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-07-08T10:20:32.359201+00:00"
+  "last_updated": "2026-07-08T14:12:15.011423+00:00"
 }
