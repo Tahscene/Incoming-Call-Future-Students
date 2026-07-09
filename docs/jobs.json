@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "c1750f8bc7c2",
+      "title": "East West University holds seminar on AI and cybersecurity",
+      "institution": "TBS News",
+      "source": "TBS News",
+      "url": "https://www.tbsnews.net/economy/corporates/east-west-university-holds-seminar-ai-and-cybersecurity-1419436",
+      "deadline": "",
+      "found_at": "2026-07-09T21:25:47.410365+00:00",
+      "notified": false
+    },
+    {
       "id": "7acf63d89336",
       "title": "SUB launches Bangladesh's first MSc in data science and machine ...",
       "institution": "TBS News",
@@ -921,5 +931,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-07-09T19:56:48.769717+00:00"
+  "last_updated": "2026-07-09T21:26:37.589894+00:00"
 }
