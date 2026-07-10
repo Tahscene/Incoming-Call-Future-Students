@@ -751,16 +751,6 @@
       "notified": false
     },
     {
-      "id": "e52e79f759f6",
-      "title": "BRAC University - Senior Lecturer - Jobs",
-      "institution": "BDJobs",
-      "source": "BDJobs",
-      "url": "https://jobs.bdjobs.com/jobdetails.asp?id=1491599&type=new",
-      "deadline": "",
-      "found_at": "2026-05-25T15:08:43.614975+00:00",
-      "notified": false
-    },
-    {
       "id": "6bf1ab39ee9a",
       "title": "ATIKA AKTER - Bangladesh University of Professionals",
       "institution": "Web",
@@ -931,5 +921,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-07-10T14:29:25.336282+00:00"
+  "last_updated": "2026-07-10T17:48:49.041814+00:00"
 }
