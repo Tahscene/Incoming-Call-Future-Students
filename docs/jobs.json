@@ -1,6 +1,16 @@
 {
   "jobs": [
     {
+      "id": "b290d20fab18",
+      "title": "Lecturer CSE",
+      "institution": "UIU",
+      "source": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-cse-262-2/",
+      "deadline": "",
+      "found_at": "2026-08-09T14:34:59.697912+00:00",
+      "notified": false
+    },
+    {
       "id": "c1750f8bc7c2",
       "title": "East West University holds seminar on AI and cybersecurity",
       "institution": "TBS News",
@@ -201,5 +211,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-08-09T12:52:40.617069+00:00"
+  "last_updated": "2026-08-09T14:35:25.121813+00:00"
 }
