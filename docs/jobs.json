@@ -1,6 +1,26 @@
 {
   "jobs": [
     {
+      "id": "7cc9722ffcec",
+      "title": "Lecturer – Supply Chain Management",
+      "institution": "UIU",
+      "source": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-supply-chain-management-262/",
+      "deadline": "",
+      "found_at": "2026-08-10T11:09:22.860228+00:00",
+      "notified": false
+    },
+    {
+      "id": "1f1a1a3ee1d2",
+      "title": "Lecturer – Business Analytics",
+      "institution": "UIU",
+      "source": "UIU",
+      "url": "https://www.uiu.ac.bd/career/lecturer-business-analytics-262/",
+      "deadline": "",
+      "found_at": "2026-08-10T11:09:20.381763+00:00",
+      "notified": false
+    },
+    {
       "id": "b290d20fab18",
       "title": "Lecturer CSE",
       "institution": "UIU",
@@ -211,5 +231,5 @@
       "notified": false
     }
   ],
-  "last_updated": "2026-08-10T09:22:48.116028+00:00"
+  "last_updated": "2026-08-10T11:09:49.121505+00:00"
 }
